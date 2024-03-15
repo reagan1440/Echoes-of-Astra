@@ -11,7 +11,7 @@ import './style.css';
 
 // TODO: Add a comment describing the functionality of loadStripe
 // Your comment here
-
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
