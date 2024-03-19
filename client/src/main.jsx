@@ -6,8 +6,7 @@ import App from './App.jsx';
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import AuthPage from './pages/Auth';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
@@ -21,11 +20,8 @@ const router = createBrowserRouter([
         index: true, 
         element: <Home />
       }, {
-        path: '/login',
-        element: <Login />
-      }, {
-        path: '/signup',
-        element: <Signup />
+        path: '/auth',
+        element: <AuthPage/>
       }, {
         path: '/success',
         element: <Success />
