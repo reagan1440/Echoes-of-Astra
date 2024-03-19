@@ -1,5 +1,6 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import Cosmog from '../../../public/images/cosmog.png';
 
 function Nav() {
 
@@ -41,10 +42,11 @@ function Nav() {
   return (
     <header className="flex-row px-1">
       <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">🧞‍♂️</span>
+      <Link to="/">
+          <img src={Cosmog} alt="Cosmog" style={{ width: '50px' }} />
           -Echoes-Of-Astra
         </Link>
+
       </h1>
 
       <nav>
