@@ -39,7 +39,7 @@ function Nav() {
       <h1>
       <Link to="/">
           {/* <img src={Cosmog} alt="Cosmog" style={{ width: '50px' }} /> */}
-          Echoes-Of-Astra
+          Echoes Of Astra
         </Link>
 
       </h1>
