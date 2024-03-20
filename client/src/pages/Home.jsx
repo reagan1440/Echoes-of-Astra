@@ -4,7 +4,7 @@ import { Box, Text, Center, Grid, GridItem } from "@chakra-ui/react"
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="homeContainer">
 
 
 <Grid templateColumns='repeat(3, 1fr)' gap={100}>
