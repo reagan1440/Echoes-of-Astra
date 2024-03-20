@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+.homeContainer{
+  background-image: linear-gradient(to top right, #FFCBF2, #F3C4FB, #ECBCFD,  #D0D1FF, #C8E7FF, #C0FDFF, #E5B3FE, #E2AFFF, #D8BBFF );
+}
+
 html,
 body {
   min-height: 100%;
