@@ -6,6 +6,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import { ChakraProvider } from '@chakra-ui/react';
 
 import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
@@ -31,12 +32,14 @@ const client = new ApolloClient({
 
 function App() {
   return (
+    <ChakraProvider>
     <ApolloProvider client={client}>
       <StoreProvider>
         <Nav />
         <Outlet />
       </StoreProvider>
     </ApolloProvider>
+    </ChakraProvider>
   );
 }
 

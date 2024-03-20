@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
 import Home from './pages/Home';
+import DreamDictionary from './pages/DreamDictionary';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
 import AuthPage from './pages/Auth';
@@ -31,6 +32,9 @@ const router = createBrowserRouter([
       }, {
         path: '/products/:id',
         element: <Detail />
+      },{
+        path: '/dreamDictionary',
+        element: <DreamDictionary />
       }
     ]
   }

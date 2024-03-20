@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
+import { Button } from '@chakra-ui/react'
 import { useStoreContext } from '../../utils/GlobalState';
 import {
   UPDATE_CATEGORIES,
@@ -45,18 +46,18 @@ function CategoryMenu() {
     <div>
       <h2>Choose a Category:</h2>
       {categories.map((item) => (
-        <button
+        <Button
           key={item._id}
           onClick={() => {
             handleClick(item._id);
           }}
         >
           {item.name}
-        </button>
+        </Button>
       ))}
-      <button onClick={() => { handleClick('') }}>
+      <Button onClick={() => { handleClick('') }}>
         All
-      </button>
+      </Button>
     </div>
   );
 }
