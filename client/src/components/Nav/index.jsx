@@ -1,6 +1,6 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import Cosmog from '../../../public/images/cosmog.png';
+import Cosmog from '../../assets/images/Cosmog.png';
 
 function Nav() {
 
