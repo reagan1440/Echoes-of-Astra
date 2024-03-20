@@ -10,6 +10,7 @@ import NoMatch from './pages/NoMatch';
 import AuthPage from './pages/Auth';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
+import ChatbotApp from './components/OPENAI/chat.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,23 +19,32 @@ const router = createBrowserRouter([
     error: <NoMatch />,
     children: [
       {
-        index: true, 
+        index: true,
         element: <Home />
-      }, {
+      }, 
+      {
         path: '/auth',
-        element: <AuthPage/>
-      }, {
+        element: <AuthPage />
+      }, 
+      {
         path: '/success',
         element: <Success />
-      }, {
+      }, 
+      {
         path: '/orderHistory',
         element: <OrderHistory />
-      }, {
+      }, 
+      {
         path: '/products/:id',
         element: <Detail />
-      },{
+      }, 
+      {
         path: '/dreamDictionary',
         element: <DreamDictionary />
+      },
+      {
+        path: '/chat',
+        element: <ChatbotApp />
       }
     ]
   }
