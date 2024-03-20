@@ -44,7 +44,7 @@ function CategoryMenu() {
 
   return (
     <div>
-      <h2>Choose a Category:</h2>
+      <h2>Choose how much you wish to donate!:</h2>
       {categories.map((item) => (
         <Button
           key={item._id}
