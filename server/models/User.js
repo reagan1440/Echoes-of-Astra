@@ -2,17 +2,19 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcryptjs');
-const Order = require('./Order');
+const Donation = require('./Donation');
+
+const chatHistory = require('./chatAI');
 
 const userSchema = new Schema({
   firstName: {
     type: String,
-    required: true,
+    required: false,
     trim: true
   },
   lastName: {
     type: String,
-    required: true,
+    required: false,
     trim: true
   },
   email: {
@@ -25,7 +27,8 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
-  orders: [Order.schema]
+  donations: [Donation.schema],
+  chatHistory: [chatHistory.schema]
 });
 
 // set up pre-save middleware to create password
