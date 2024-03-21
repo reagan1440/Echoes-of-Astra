@@ -25,7 +25,7 @@ const typeDefs = `
     firstName: String
     lastName: String
     email: String
-    orders: [Order]
+    donations: [Donation]
   }
 
   type chatHistory {
@@ -57,13 +57,13 @@ const typeDefs = `
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
     user: User
-    order(_id: ID!): Order
+    donation(_id: ID!): Donation
     checkout(products: [ProductInput]): Checkout
   }
 
   type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(products: [ID]!): Order
+    addDonation(products: [ID]!): Donation
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
