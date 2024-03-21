@@ -1,3 +1,5 @@
+import AstraApproved from '../../assets/images/cosmog.png';
+
 export default function DreamJournal() {
     return (
         <>
@@ -22,7 +24,7 @@ export default function DreamJournal() {
                         </p>
                     </div>
                     <div className="astraCert">
-                        <img src="../../assets/images/cosmog.png" alt="Astra Approved" />
+                        <img src={AstraApproved} alt="Astra Approved" />
                     </div>
                 </div>
             </div>
