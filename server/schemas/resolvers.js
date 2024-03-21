@@ -1,4 +1,4 @@
-const { User, Product, Category, Order } = require('../models');
+const { User, Product, Category, Donation } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
@@ -6,6 +6,9 @@ const resolvers = {
   Query: {
     categories: async () => {
       return await Category.find();
+    },
+    chatHistory: async (parent, args, context) => {
+     return await User.findById(context.user._id).populate('chatHistory');
     },
     products: async (parent, { category, name }) => {
       const params = {};
@@ -39,7 +42,7 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    order: async (parent, { _id }, context) => {
+    donation: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
           path: 'orders.products',
@@ -91,13 +94,13 @@ const resolvers = {
 
       return { token, user };
     },
-    addOrder: async (parent, { products }, context) => {
+    addDonation: async (parent, { products }, context) => {
       if (context.user) {
-        const order = new Order({ products });
+        const order = new Donation({ products });
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+        await User.findByIdAndUpdate(context.user._id, { $push: { donations: donation } });
 
-        return order;
+        return donation;
       }
 
       throw AuthenticationError;

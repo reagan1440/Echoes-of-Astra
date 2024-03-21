@@ -14,7 +14,7 @@ const typeDefs = `
     category: Category
   }
 
-  type Order {
+  type Donation {
     _id: ID
     purchaseDate: String
     products: [Product]
@@ -26,6 +26,12 @@ const typeDefs = `
     lastName: String
     email: String
     orders: [Order]
+  }
+
+  type chatHistory {
+    _id: ID
+    userHistory: String
+    chatHistory: String
   }
 
   type Checkout {
