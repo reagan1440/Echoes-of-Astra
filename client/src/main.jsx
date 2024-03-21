@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         element: <DreamDictionary />
       },
       {
-        path: '/chat',
+        path: '/dreamInterpretation',
         element: <ChatbotApp />
       },
       {
