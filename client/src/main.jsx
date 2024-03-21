@@ -11,6 +11,7 @@ import AuthPage from './pages/Auth';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import ChatbotApp from './components/OPENAI/chat.jsx';
+import DreamJournal from './components/DreamJournal/DreamJournal.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: '/chat',
         element: <ChatbotApp />
+      },
+      {
+        path: '/dreamJournal',
+        element: <DreamJournal />
       }
     ]
   }
