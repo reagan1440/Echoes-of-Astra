@@ -2,10 +2,10 @@
 
   --light: #fafafa;
   --dark: #272f32;
-  --primary: #b8336a;
-  --primaryB: #c490d1;
+  --primary: #c490d1;
   --secondary: #acacde;
   --tertiary: #abdafc;
+  --tertiaryB: #b8336a;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -15,13 +15,14 @@
   box-sizing: border-box;
 }
 
-#root{
-  background-image: linear-gradient(to top left, #b8336a, #c490d1, #acacde, #abdafc);
+.homeContainer{
+  background-image: linear-gradient(to top left, #c490d1, #acacde, #abdafc);
 }
 
 html,
 body {
   min-height: 100%;
+
 }
 
 body {
