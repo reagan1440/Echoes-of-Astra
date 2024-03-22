@@ -6,20 +6,6 @@ export default function Particle() {
       id="tsparticles"
       options={{
         fpsLimit: 60,
-        interactivity: {
-          events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
-            resize: true,
-          },
-          modes: {
-            push: {
-              quantity: 4,
-            },
-          },
-        },
         particles: {
           color: {
             value: "#ffffff",
@@ -28,11 +14,11 @@ export default function Particle() {
             color: "#ffffff",
             distance: 150,
             enable: false,
-            opacity: 0.5,
+            opacity: 1,
             width: 1,
           },
           collisions: {
-            enable: false,
+            enable: true,
           },
           move: {
             directions: "none",
@@ -40,7 +26,7 @@ export default function Particle() {
             outModes: {
               default: "bounce",
             },
-            random: false,
+            random: true,
             speed: 0.5,
             straight: false,
           },
@@ -52,7 +38,7 @@ export default function Particle() {
             value: 80,
           },
           opacity: {
-            value: 0.5,
+            value: 1,
           },
           shape: {
             type: "circle",

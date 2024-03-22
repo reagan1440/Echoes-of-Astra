@@ -32,13 +32,28 @@
     align-items: center;
     gap: 1rem;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
     width: 250px;
     height: 80px;
     position: relative;
     color: #B8336A;
+    cursor: pointer;
 }
+
+.entry:after {
+    content:"";
+    background-color:#fff;
+    border-radius:50%;
+    display:block;
+    position:absolute;
+    z-index:1;
+    bottom:-20px;
+    right:-22px;
+    width:25px;
+    height:25px;
+}
+
 
 .entryDate p, .entryTitle p {
     font-size: 14px;
