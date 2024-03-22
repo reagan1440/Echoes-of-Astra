@@ -1,9 +1,11 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+
   --light: #fafafa;
   --dark: #272f32;
+  --primary: #b8336a;
+  --primaryB: #c490d1;
+  --secondary: #acacde;
+  --tertiary: #abdafc;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -13,8 +15,8 @@
   box-sizing: border-box;
 }
 
-.homeContainer{
-  background-image: linear-gradient(to top right, #FFCBF2, #F3C4FB, #ECBCFD,  #D0D1FF, #C8E7FF, #C0FDFF, #E5B3FE, #E2AFFF, #D8BBFF );
+#root{
+  background-image: linear-gradient(to top left, #b8336a, #c490d1, #acacde, #abdafc);
 }
 
 html,
@@ -83,12 +85,12 @@ a:hover {
   text-decoration: underline;
 }
 
-header {
-  background: var(--primary);
-}
+/* header {
+  background: var(--primaryB);
+} */
 
 header a {
-  color: var(--light);
+  color: var(--dark);
 }
 
 button {

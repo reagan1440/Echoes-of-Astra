@@ -8,15 +8,10 @@ import {
   
   const Theme = extendTheme({
     colors:{
-        primary: "#FFCBF2",
-        primaryB: "#F3C4FB",
-        primaryC: "#ECBCFD",
-        secondary: "#C0FDFF",
-        secondaryB: "#D0D1FF",
-        secondaryC: "#C8E7FF",
-        tertiary: "#D8BBFF",
-        teritaryB: "#E5B3FE",
-        teritaryC: "#E2AFFF"
+        primary: 'b8336a',
+        primaryB: 'c490d1',
+        secondary: 'acacde',
+        tertiary: 'abdafc',
     },
     components: {
       Button,
