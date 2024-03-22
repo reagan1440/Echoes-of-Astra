@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const bcrypt = require('bcryptjs');
 const Donation = require('./Donation');
 
-const chatHistory = require('./chatAI');
+const chatHistory = require('./ChatAI');
 
 const userSchema = new Schema({
   firstName: {

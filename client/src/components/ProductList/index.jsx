@@ -16,6 +16,7 @@ function ProductList() {
 
   useEffect(() => {
     if (data) {
+
       dispatch({
         type: UPDATE_PRODUCTS,
         products: data.products,
@@ -48,8 +49,10 @@ function ProductList() {
       <h2>Common Dream Themes:</h2>
       {state.products.length ? (
         <div className="flex-row">
-          {filterProducts().map((product) => (
-            <ProductItem
+          {filterProducts().map((product) => {
+             console.log(product.image);
+            return <ProductItem
+
               key={product._id}
               _id={product._id}
               image={product.image}
@@ -57,7 +60,8 @@ function ProductList() {
               price={product.price}
               quantity={product.quantity}
             />
-          ))}
+      })}
+
         </div>
       ) : (
         <h3>You haven't added any products yet!</h3>

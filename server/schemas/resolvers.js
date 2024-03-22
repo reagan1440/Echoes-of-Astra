@@ -35,7 +35,7 @@ const resolvers = {
           populate: 'category'
         });
 
-        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+        user.donations.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
         return user;
       }
@@ -45,11 +45,11 @@ const resolvers = {
     donation: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.products',
+          path: 'donations.products',
           populate: 'category'
         });
 
-        return user.orders.id(_id);
+        return user.donations.id(_id);
       }
 
       throw AuthenticationError;

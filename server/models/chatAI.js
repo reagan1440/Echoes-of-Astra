@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 //const bcrypt = require('bcryptjs');
 
-const chatAISchema = new Schema({
+const ChatAISchema = new Schema({
 userHistory: {
     type: String,
     required: false,
@@ -16,6 +16,6 @@ userHistory: {
   },
 })
 
-const chatAI = mongoose.model('chatAI', chatAISchema);
+const ChatAI = mongoose.model('ChatAI', ChatAISchema);
 
-module.exports = chatAI;
+module.exports = ChatAI;
