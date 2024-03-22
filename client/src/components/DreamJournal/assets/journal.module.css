@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
+
+* {
+    font-family: 'Cutive';
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 3rem;
+    margin: 50px;
+}
+
+.entryHistory {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    flex: 1;
+    max-width: 500px;
+    background-image: linear-gradient(#C490D1, #ACACDE, #ABDAFC);
+    padding: 3rem;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+    height: 80px;
+    position: relative;
+    color: #B8336A;
+}
+
+.entryDate p, .entryTitle p {
+    font-size: 14px;
+}
+
+.currentEntry {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 680px;
+    background-image: linear-gradient(#C490D1, #ACACDE, #ABDAFC);
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    height: 85vh;
+    position: relative;
+}
+
+.currentEntry img {
+    width: 150px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.title p {
+    font-size: 40px;
+    text-align: center;
+}
