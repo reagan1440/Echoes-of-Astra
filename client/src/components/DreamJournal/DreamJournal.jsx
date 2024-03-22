@@ -1,5 +1,6 @@
 import AstraApproved from '../../assets/images/cosmog.png';
 import styles from './assets/journal.module.css';
+import Particle from '../Particle';
 
 export default function DreamJournal() {
     return (
@@ -40,6 +41,7 @@ export default function DreamJournal() {
                     </div>
                 </div>
                 <div className={styles.currentEntry}>
+                    <Particle />
                     <div className={styles.title}>
                         <p>Naked Dream</p>
                     </div>
