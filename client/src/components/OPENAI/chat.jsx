@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { SAVE_DREAM } from "../../utils/mutations";
+import { TbMessageCircleUp } from "react-icons/tb";
 
 const ChatbotApp = () => {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
-
   const [saveDream] = useMutation(SAVE_DREAM);
-
   const loading = false;
 
   const handleSubmit = async (event) => {
@@ -35,52 +34,37 @@ const ChatbotApp = () => {
       requestOptions
     );
     const aiResponse = await response.json();
-    // if (aiResponse) {
-      const dataObj = {
-        usersDream: prompt,
-        aiResponse: aiResponse.choices[0].message.content,
-      };
 
-      const { data } = await saveDream({
-        variables: dataObj,
-      });
-      console.log(aiResponse);
-      setResponse(aiResponse);
-    // }
+    const dataObj = {
+      usersDream: prompt,
+      aiResponse: aiResponse.choices[0].message.content,
+    };
+
+    const { data } = await saveDream({
+      variables: dataObj,
+    });
+    console.log(aiResponse);
+    setResponse(aiResponse);
   };
-  // console.log(prompt);
-
-  //   console.log(response.choices[0].message.content);
-
+  
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div className="chatbox-container">
         <form onSubmit={handleSubmit}>
           <textarea
+            className="chatbox-input"
             type="text"
             value={prompt}
-            placeholder="Please ask to openai"
+            placeholder="Describe your dream..."
             onChange={(e) => setPrompt(e.target.value)}
           ></textarea>
-          <button disabled={loading || prompt.length === 0} type="submit">
-            generate
-            {/* {loading ? "Generating..." : "Generate"} */}
+          <button disabled={loading || prompt.length === 0} type="submit" className="chatbox-submit">
+            <TbMessageCircleUp />
           </button>
         </form>
       </div>
       {response ? (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
+        <div className="chatbox-response">
           <p>{response?.choices[0].message.content}</p>
         </div>
       ) : (
@@ -91,3 +75,4 @@ const ChatbotApp = () => {
 };
 
 export default ChatbotApp;
+

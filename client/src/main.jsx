@@ -3,7 +3,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
-import Home from './pages/Home';
+import Home from './pages/Home/Home.jsx';
 import DreamDictionary from './pages/DreamDictionary';
 import NoMatch from './pages/NoMatch';
 import AuthPage from './pages/Auth';
