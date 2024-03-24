@@ -23,38 +23,6 @@ console.log(userData);
               </div>
             </div>
           ))}
-          {/* <div className={styles.entry}>
-                        <div className={styles.entryDate}>
-                            <p>1/1/2024</p>
-                        </div>
-                        <div className={styles.entryTitle}>
-                            <p>Teeth Falling out</p>
-                        </div>
-                    </div>
-                    <div className={styles.entry}>
-                        <div className={styles.entryDate}>
-                            <p>1/2/2024</p>
-                        </div>
-                        <div className={styles.entryTitle}>
-                            <p>Running from something</p>
-                        </div>
-                    </div>
-                    <div className={styles.entry}>
-                        <div className={styles.entryDate}>
-                            <p>1/2/2024</p>
-                        </div>
-                        <div className={styles.entryTitle}>
-                            <p>Running from something</p>
-                        </div>
-                    </div>
-                    <div className={styles.entry}>
-                        <div className={styles.entryDate}>
-                            <p>1/2/2024</p>
-                        </div>
-                        <div className={styles.entryTitle}>
-                            <p>Running from something</p>
-                        </div>
-                    </div> */}
         </div>
         <div className={styles.currentEntry}>
           <Particle />
