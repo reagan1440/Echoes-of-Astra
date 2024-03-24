@@ -40,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: '/dreamJournal',
         element: <DreamJournal />
+      },
+      {
+        path: '/dreamJournal',
+        element: <DreamJournal />
       }
     ]
   }
