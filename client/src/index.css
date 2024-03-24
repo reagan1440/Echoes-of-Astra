@@ -211,3 +211,20 @@ input:focus {
   }
 }
 
+
+
+
+/* NAV */
+
+.flex-row {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.icons{
+  display: inline-block;
+  padding-top: 20px;
+  margin-right: 10px;
+
+}

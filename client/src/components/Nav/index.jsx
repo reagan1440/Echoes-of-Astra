@@ -1,6 +1,8 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import Cosmog from '../../assets/images/Cosmog.png';
+import { CgProfile } from "react-icons/cg";
+import { BiSolidDonateHeart } from "react-icons/bi";
+
 
 function Nav() {
 
@@ -24,9 +26,14 @@ function Nav() {
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <li className="icons">
             <Link to="/auth">
-              Login
+              <CgProfile />
+            </Link>
+          </li>
+          <li className="icons">
+            <Link to="/donationHistory">
+              <BiSolidDonateHeart />
             </Link>
           </li>
         </ul>
@@ -35,13 +42,11 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-2">
+    <header className="flex-row px-2" style={{ justifyContent: 'space-between' }}>
       <h1>
-      <Link to="/">
-          {/* <img src={Cosmog} alt="Cosmog" style={{ width: '50px' }} /> */}
+        <Link to="/">
           Echoes Of Astra
         </Link>
-
       </h1>
 
       <nav>

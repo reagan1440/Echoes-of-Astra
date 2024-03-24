@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="homeContainer">
-      <Grid templateColumns="repeat(3, 1fr)" gap={100}>
+      <Grid className="flex-row px-2"  templateColumns="repeat(3, 1fr)" gap={100} >
         <h1>
           {" "}
           <GridItem />
