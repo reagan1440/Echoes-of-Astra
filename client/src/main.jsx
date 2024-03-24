@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
 import Home from './pages/Home/Home.jsx';
-import DreamDictionary from './pages/DreamDictionary';
+import DreamDictionary from './pages/Dream Dictionary/DreamDictionary.jsx';
 import NoMatch from './pages/NoMatch';
 import AuthPage from './pages/Auth';
 import Success from './pages/Success';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from "./DreamDictionary/dreamdictionary.module.css";
+import styles from "./dreamdictionary.module.css";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../../utils/queries";
