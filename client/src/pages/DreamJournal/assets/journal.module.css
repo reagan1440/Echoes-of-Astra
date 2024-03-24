@@ -36,6 +36,7 @@
     padding: 10px;
     width: 250px;
     height: 80px;
+    max-height: auto;
     position: relative;
     color: #B8336A;
     cursor: pointer;
