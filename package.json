@@ -22,6 +22,7 @@
     "@emotion/styled": "^11.11.0",
     "bcryptjs": "^2.4.3",
     "framer-motion": "^11.0.18",
+    "react-icons": "^5.0.1",
     "react-tsparticles": "^1.42.2"
   }
 }
