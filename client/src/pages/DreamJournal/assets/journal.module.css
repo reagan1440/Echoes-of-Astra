@@ -68,7 +68,7 @@
     color: white;
     padding: 3rem;
     border-radius: 20px;
-    height: 85vh;
+    height: 100%;
     position: relative;
 }
 
@@ -80,7 +80,12 @@
     right: 0;
 }
 
-.title p {
-    font-size: 40px;
-    text-align: center;
+.userRes p,
+.entryContent p {
+    font-size: 25px;
+}
+
+.noEntries {
+    font-size: 25px;
+    color: white;
 }
