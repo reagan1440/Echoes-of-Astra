@@ -11,7 +11,7 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-          <Link to="/donationHistory"  title="Make a donation">
+          <Link to="/donations"  title="Make a donation">
            <BiSolidDonateHeart />
            </Link>
           </li>
@@ -32,7 +32,7 @@ function Nav() {
             </Link>
           </li>
           <li className="icons">
-            <Link to="/donationHistory"  title="Make a donation">
+            <Link to="/donations"  title="Make a donation">
            
               <BiSolidDonateHeart />
             </Link>
