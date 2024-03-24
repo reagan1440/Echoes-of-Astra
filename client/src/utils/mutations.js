@@ -49,3 +49,17 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const SAVE_DREAM = gql `
+mutation saveDream($usersDream: String, $aiResponse: String) {
+  saveDream(usersDream: $usersDream, aiResponse: $aiResponse) {
+    _id
+    firstName
+    lastName
+    email
+    dreamHistory {
+      usersDream
+      aiResponse
+    }
+  }
+}`

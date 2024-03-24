@@ -1,21 +1,25 @@
-const mongoose = require('mongoose');
-
-const { Schema } = mongoose;
+const { Schema } = require('mongoose');
 //const bcrypt = require('bcryptjs');
+const dateFormat = require('../utils/dateFormat')
 
 const ChatAISchema = new Schema({
-userHistory: {
+usersDream: {
     type: String,
     required: false,
     trim: true
   },
-  chatHistory: {
+  aiResponse: {
     type: String,
     required: false,
     trim: true
   },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    get: (date)=>dateFormat(date)
+  }
 })
 
-const ChatAI = mongoose.model('ChatAI', ChatAISchema);
 
-module.exports = ChatAI;
+
+module.exports = ChatAISchema;
