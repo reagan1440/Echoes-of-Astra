@@ -11,9 +11,9 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-            <Link to="/donationHistory">
-              Make a Donation
-            </Link>
+          <Link to="/donationHistory"  title="Make a donation">
+           <BiSolidDonateHeart />
+           </Link>
           </li>
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
@@ -27,12 +27,13 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="icons">
-            <Link to="/auth">
+            <Link to="/auth" title="Login">
               <CgProfile />
             </Link>
           </li>
           <li className="icons">
-            <Link to="/donationHistory">
+            <Link to="/donationHistory"  title="Make a donation">
+           
               <BiSolidDonateHeart />
             </Link>
           </li>

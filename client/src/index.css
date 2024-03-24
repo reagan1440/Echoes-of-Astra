@@ -225,6 +225,51 @@ input:focus {
 .icons{
   display: inline-block;
   padding-top: 20px;
-  margin-right: 10px;
+  margin-right: 15px;
 
+}
+
+
+/* Dream Interpretation AI  */
+
+.chatbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+}
+
+.chatbox-input {
+  width: calc(100% - 60px); /* Adjust the width to leave space for the submit button */
+  height: 200px;
+  border: 1px solid #c490d1;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.chatbox-submit {
+  background-color: #abdafc;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 430px;
+}
+
+.chatbox-response {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.chatbox-response p {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
 }

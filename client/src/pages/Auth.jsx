@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import { Button } from '@chakra-ui/react';
 import Auth from '../utils/auth';
 import { LOGIN, ADD_USER } from '../utils/mutations';
 
@@ -86,7 +87,7 @@ function AuthPage() {
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email:</label>
           <input
-            placeholder="youremail@test.com"
+            placeholder="Your email"
             name="email"
             type="email"
             id="email"
@@ -106,12 +107,12 @@ function AuthPage() {
           />
         </div>
         <div className="flex-row flex-end">
-          <button type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
+          <Button type="submit">{isLogin ? 'Login' : 'Sign Up'}</Button>
         </div>
       </form>
-      <button onClick={toggleMode}>
+      <Button onClick={toggleMode}>
         {isLogin ? 'Need to Sign Up?' : 'Already have an account? Login'}
-      </button>
+      </Button>
     </div>
   );
 }
