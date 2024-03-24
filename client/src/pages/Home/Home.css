@@ -1,0 +1,17 @@
+
+#root{
+    background-image: linear-gradient(to top left, #c490d1, #acacde, #abdafc);
+    background-size: cover;
+    height: 120vh;
+  }
+
+.genie{
+    margin-top: 60px; /* Adjust this value to move the genie down */
+}
+.rbubble{
+    margin-left: 80px;
+}
+
+.lbubble{
+    margin-right: 80px;
+}
