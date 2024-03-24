@@ -11,7 +11,7 @@ import AuthPage from './pages/Auth';
 import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
 import ChatbotApp from './components/OPENAI/chat.jsx';
-import DreamJournal from './components/DreamJournal/DreamJournal.jsx';
+import DreamJournal from './pages/DreamJournal/DreamJournal.jsx';
 
 const router = createBrowserRouter([
   {

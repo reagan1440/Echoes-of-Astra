@@ -1,6 +1,6 @@
 import AstraApproved from "../../assets/images/cosmog.png";
 import styles from "./assets/journal.module.css";
-import Particle from "../Particle";
+import Particle from "../../components/Particle";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../../utils/queries";
