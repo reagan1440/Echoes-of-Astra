@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { SAVE_DREAM } from "../../utils/mutations";
+import { TbMessageCircleUp } from "react-icons/tb";
+
 
 const ChatbotApp = () => {
   const [prompt, setPrompt] = useState("");
@@ -65,11 +67,12 @@ const ChatbotApp = () => {
           <textarea
             type="text"
             value={prompt}
-            placeholder="Please ask to openai"
+            placeholder="Describe your dream..."
             onChange={(e) => setPrompt(e.target.value)}
           ></textarea>
           <button disabled={loading || prompt.length === 0} type="submit">
-            generate
+          <TbMessageCircleUp />
+
             {/* {loading ? "Generating..." : "Generate"} */}
           </button>
         </form>
