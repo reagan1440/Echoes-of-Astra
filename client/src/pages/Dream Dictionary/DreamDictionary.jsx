@@ -7,7 +7,8 @@ import flying from "../../assets/images/flying.jpg";
 import late from "../../assets/images/late.jpg";
 import lost from "../../assets/images/lost.jpg";
 import naked from "../../assets/images/naked.jpg";
-// import teeth from "../../assets/images/teeth.png";
+import paralysis from "../../assets/images/sleep-paralysis.jpg";
+import teeth from "../../assets/images/teeth.jpg";
 import test from "../../assets/images/test-taking.jpg";
 import water from "../../assets/images/water.jpg";
 
@@ -58,13 +59,24 @@ image: lost,
       image: naked,
     },
     {
-      id: 8,
+id: 8,
+title: "Sleep Paralysis",
+description: "Dreams of sleep paralysis are a sign that you are feeling trapped or helpless in your life. It could mean that you are feeling overwhelmed by a situation or that you are afraid of losing control.",
+image: paralysis,
+    },
+    { id: 9,
+      title: "Teeth",
+      description: "Dreams of teeth are a sign that you are feeling anxious or stressed in your life. It could mean that you are feeling insecure or that you are afraid of losing something important to you.",
+      image: teeth,
+    },
+    {
+      id: 10,
       title: "Test Taking",
       description: "Dreams of taking a test are a sign that you are feeling anxious or stressed in your life. It could mean that you are feeling unprepared or that you are afraid of failing.",
       image: test,
     },
     {
-      id: 9,
+      id: 11,
       title: "Water",
       description: "Dreams of water are a sign that you are feeling emotional or overwhelmed in your life. It could mean that you are feeling out of control or that you are afraid of drowning in your emotions.",
       image: water,
