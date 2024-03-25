@@ -63,21 +63,12 @@
 .currentEntry {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     max-width: 680px;
     background-image: linear-gradient(#C490D1, #ACACDE, #ABDAFC);
+    height: auto;
     color: white;
     padding: 3rem;
     border-radius: 20px;
-    position: relative;
-}
-
-.currentEntry img {
-    width: 150px;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
 
 .userRes p,
