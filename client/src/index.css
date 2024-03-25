@@ -273,7 +273,7 @@ input:focus {
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
-  margin-left: 465px;
+  /* margin-left: 465px; */
 }
 
 .chatbox-response {
@@ -310,3 +310,14 @@ input:focus {
 }
 
 
+@media screen and (max-width: 768px) {
+  .chatbox-input {
+   width: 200px !important;
+   height: 300px
+  
+  }
+
+  .chatbox-submit{
+    height: 50px;
+  }
+}

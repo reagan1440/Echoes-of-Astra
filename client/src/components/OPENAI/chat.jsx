@@ -77,7 +77,7 @@ const ChatbotApp = () => {
             Click me to view your <br />
             dream journal!!
           </p>
-          <Image src={astra} boxSize="20%" alt="genie" className="float" />
+          <Image src={astra} boxSize="20%" alt="genie" className="float"   height={{base: "100%", sm: "50%"}} />
         </div>
       </Link>
       <div className="chatbox-container">
