@@ -48,16 +48,19 @@ color: var(--primary);
   .bubble-container {
     position: relative;
     filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
-
-
   }
   
   .bubble-container p {
     position: absolute;
+    font-size: 30px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--primary);
     text-align: center;
     margin: 0;
+  }
+
+  .bubble-container p:hover {
+    color: #acacde;
   }

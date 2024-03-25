@@ -23,6 +23,8 @@
     padding: 3rem;
     border-radius: 20px;
     height: 100%;
+    filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+
 }
 
 .entry {
@@ -36,7 +38,6 @@
     padding: 10px;
     width: 250px;
     height: 80px;
-
     position: relative;
     color: #B8336A;
     cursor: pointer;
@@ -69,6 +70,8 @@
     color: white;
     padding: 3rem;
     border-radius: 20px;
+    filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+
 }
 
 .userRes p,
