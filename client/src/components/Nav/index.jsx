@@ -2,6 +2,8 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { BiSolidDonateHeart } from "react-icons/bi";
+import { IoLogOut } from "react-icons/io5";
+import { IoHome } from "react-icons/io5";
 
 
 function Nav() {
@@ -11,15 +13,20 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-          <Link to="/donations"  title="Make a donation">
+          <Link  className="icons" to="/donations"  title="Make a donation">
            <BiSolidDonateHeart />
            </Link>
           </li>
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
+            <a className="icons" title="Logout" href="/" onClick={() => Auth.logout()}>
+            <IoLogOut />
             </a>
+          </li>
+          <li className="mx-1">
+            <Link className="icons" to="/"  title="Go to homepage">
+            <IoHome />
+            </Link>
           </li>
         </ul>
       );
@@ -35,6 +42,11 @@ function Nav() {
             <Link to="/donations"  title="Make a donation">
            
               <BiSolidDonateHeart />
+            </Link>
+          </li>
+          <li className="icons">
+            <Link to="/"  title="Go to homepage">
+            <IoHome />
             </Link>
           </li>
         </ul>
