@@ -33,8 +33,8 @@ const client = new ApolloClient({
 function App() {
   return (
     <ChakraProvider>
+    <Particle />
     <ApolloProvider client={client}>
-        <Particle />
         <Nav />
         <Outlet />
     </ApolloProvider>

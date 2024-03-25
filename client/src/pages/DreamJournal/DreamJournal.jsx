@@ -39,7 +39,6 @@ export default function DreamJournal() {
           )}
         </div>
         <div className={styles.currentEntry}>
-          <Particle />
           {selectedEntry ? (
             <>
               <div className={styles.userRes}>
