@@ -24,20 +24,28 @@
     border-radius: 20px;
     height: 100%;
     filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+}
 
+.containerTitle {
+    color: #B8336A;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .entry {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     background-color: #ffffff;
     border-radius: 20px;
     padding: 10px;
-    width: 250px;
-    height: 80px;
+    min-width: 250px;
+    min-height: 80px;
+    font-weight: 550;
     position: relative;
     color: #B8336A;
     cursor: pointer;
@@ -57,8 +65,8 @@
 }
 
 
-.entryDate p, .entryTitle p {
-    font-size: 14px;
+.entry p {
+    font-size: 16px;
 }
 
 .currentEntry {
@@ -71,12 +79,16 @@
     padding: 3rem;
     border-radius: 20px;
     filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
-
 }
 
-.userRes p,
-.entryContent p {
+.currentEntry p {
+    margin-top: 25px;
     font-size: 25px;
+    font-weight: 550;
+}
+
+.userRes {
+    color: #3549ba;
 }
 
 .noEntries {

@@ -10,7 +10,7 @@ import sbubble from '../../assets/images/speechBubble.png';
 export default function DreamJournal() {
   const { data, loading } = useQuery(QUERY_USER);
   const userData = data?.user || {};
-  const mostRecentEntry = userData.dreamHistory && userData.dreamHistory[0];
+  const mostRecentEntry = userData.dreamHistory && userData.dreamHistory[userData.dreamHistory.length - 1];
   const [selectedEntry, setSelectedEntry] = useState(null);
 
   const handleEntryClick = (entry) => {
@@ -23,7 +23,7 @@ export default function DreamJournal() {
         <div className={styles.speechBubbleContainerDJ}>
           <Image src={sbubble} boxSize="16%" alt="sbubble"/>
           <p className={styles.speechBubbleContainerDJ}>
-            Hi, I'm Astra, <br />
+            Hi, I&apos;m Astra, <br />
             your dream interpretation AI! <br />
             Click me to have your <br />
             dream interpreted!!
@@ -34,6 +34,7 @@ export default function DreamJournal() {
 
       <div className={styles.main}>
         <div className={styles.entryHistory}>
+          <h1 className={styles.containerTitle}>Past Interpretations</h1>
           {userData.dreamHistory && userData.dreamHistory.length > 0 ? (
             userData.dreamHistory.map((item) => (
               <div key={item.id} className={styles.entry} onClick={() => handleEntryClick(item)}>
@@ -44,12 +45,13 @@ export default function DreamJournal() {
                   <p>{item.usersDream}</p>
                 </div>
               </div>
-            ))
+            )).reverse()
           ) : (
-            <div className={styles.noEntries}>You have no interpretations to display!</div>
+            <div className={styles.noEntries}>You have no past interpretations to display!</div>
           )}
         </div>
         <div className={styles.currentEntry}>
+        <h1 className={styles.containerTitle}>Current Interpretation</h1>
           {selectedEntry ? (
             <>
               <div className={styles.userRes}>
@@ -69,7 +71,7 @@ export default function DreamJournal() {
               </div>
             </>
           ) : (
-            <div className={styles.noEntries}>You have no interpretations to display!</div>
+            <div className={styles.noEntries}>You have no current interpretations to display!</div>
           )}
         </div>
       </div>
