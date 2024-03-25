@@ -4,8 +4,12 @@
     height: 120vh;
 }
 
+.homeContainer{
+color: #acacde;
+}
+
 .genie{
-    margin-top: 60px; /* Adjust this value to move the genie down */
+    margin-top: 60px;
 }
 .rbubble{
     margin-left: 80px;
@@ -14,3 +18,24 @@
 .lbubble{
     margin-right: 80px;
 }
+
+
+.float {
+    animation-name: float-animation; 
+    animation-duration: 2.1s; 
+    animation-iteration-count: infinite; 
+    transform-origin: 70% 70%; 
+    display: inline-block;
+  }
+  
+  @keyframes float-animation {
+    0% {
+      transform: translateY(0px); /* Start at the original position */
+    }
+    50% {
+      transform: translateY(-20px); /* Float up */
+    }
+    100% {
+      transform: translateY(0px); /* Return to the original position */
+    }
+  }

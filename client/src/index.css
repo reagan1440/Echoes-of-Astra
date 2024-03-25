@@ -27,7 +27,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
-  color: var(--dark);
+  color: var(--tertiary);
 }
 
 h1,
@@ -81,12 +81,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* header {
-  background: var(--primaryB);
-} */
 
 header a {
-  color: var(--dark);
+  color: var(--secondary);
 }
 
 button {
@@ -225,7 +222,10 @@ input:focus {
 .icons{
   display: inline-block;
   padding-top: 20px;
-  margin-right: 15px;
+  margin-right: 15px; 
+  
+/* color: #ABDAFC;   linear-gradient(#C490D1, #ACACDE, #ABDAFC);*/
+
 
 }
 
@@ -247,10 +247,10 @@ input:focus {
 .chatbox-input {
   width: calc(100% - 60px); /* Adjust the width to leave space for the submit button */
   height: 200px;
-  border: 1px solid #c490d1;
+  border: 1px solid #abdafc;
   border-radius: 5px;
   padding: 10px;
-}
+} 
 
 .chatbox-submit {
   background-color: #abdafc;

@@ -36,7 +36,7 @@ const Home = () => {
 
       <Center color="white" className="genie">
         <Box boxSize="lg">
-          <Image src={astra} alt="Dream Genie" />
+          <Image className="float" src={astra} alt="Dream Genie" />
         </Box>
         </Center>
     </div>
