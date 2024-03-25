@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styles from "./assets/journal.module.css";
-import Particle from "../../components/Particle";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../../utils/queries";
