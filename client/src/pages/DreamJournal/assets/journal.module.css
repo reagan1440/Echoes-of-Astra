@@ -83,3 +83,24 @@
     font-size: 25px;
     color: white;
 }
+
+.speechBubbleContainerDJ {
+    position: absolute;
+    bottom: 130px; /* Adjust the bottom position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .speechBubbleContainerDJ p {
+    position: absolute;
+    font-size: 13px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-1%, -80%);
+    color: var(--primary);
+    text-align: center;
+    margin: 0;
+    color: #000;
+  }
