@@ -230,7 +230,7 @@ input:focus {
   display: flex;
   justify-content: flex-end;
   list-style: none;
-    filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.5));
+  filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.5));
 
 }
 
