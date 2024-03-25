@@ -7,7 +7,7 @@ import { LOGIN, ADD_USER } from '../utils/mutations';
 
 function AuthPage() {
   const [formState, setFormState] = useState({ email: '', password: '', firstName: '', lastName: '' });
-  const [isLogin, setIsLogin] = useState(true); // I made the default one as login page lolz
+  const [isLogin, setIsLogin] = useState(true);
   const [login] = useMutation(LOGIN);
   const [addUser] = useMutation(ADD_USER);
 
@@ -61,7 +61,7 @@ function AuthPage() {
         {!isLogin && (
           <>
             <div className="flex-row space-between my-2">
-              <label htmlFor="firstName">First Name:</label>
+              <label className="signup" htmlFor="firstName">First Name:</label>
               <input
                 placeholder="First"
                 name="firstName"
@@ -72,7 +72,7 @@ function AuthPage() {
               />
             </div>
             <div className="flex-row space-between my-2">
-              <label htmlFor="lastName">Last Name:</label>
+              <label className="signup" htmlFor="lastName">Last Name:</label>
               <input
                 placeholder="Last"
                 name="lastName"
@@ -85,7 +85,7 @@ function AuthPage() {
           </>
         )}
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
+          <label className="signup" htmlFor="email">Email:</label>
           <input
             placeholder="Your email"
             name="email"
@@ -96,7 +96,7 @@ function AuthPage() {
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+          <label className="signup" htmlFor="pwd">Password:</label>
           <input
             placeholder="******"
             name="password"

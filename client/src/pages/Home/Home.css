@@ -4,13 +4,63 @@
     height: 120vh;
 }
 
-.genie{
-    margin-top: 60px; /* Adjust this value to move the genie down */
+.homeContainer{
+color: var(--primary);
 }
+
+.genie {
+    position: relative;
+    top: -50px; 
+}
+
 .rbubble{
-    margin-left: 80px;
+    margin-left: 40px;
 }
 
 .lbubble{
-    margin-right: 80px;
+    margin-right: 40px;
 }
+
+
+.float {
+    animation-name: float-animation; 
+    animation-duration: 2.1s; 
+    animation-iteration-count: infinite; 
+    transform-origin: 70% 70%; 
+    display: inline-block;
+    filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.6));
+
+  }
+  
+  @keyframes float-animation {
+    0% {
+      transform: translateY(0px); /* Start at the original position */
+    }
+    50% {
+      transform: translateY(-20px); /* Float up */
+    }
+    100% {
+      transform: translateY(0px); /* Return to the original position */
+    }
+  }
+
+
+  .bubble-container {
+    position: relative;
+    filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+  }
+  
+  .bubble-container p {
+    position: absolute;
+    font-size: 30px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary);
+    text-align: center;
+    margin: 0;
+  }
+
+  .bubble-container p:hover {
+    color: #acacde;
+  }

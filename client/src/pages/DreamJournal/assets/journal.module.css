@@ -23,6 +23,8 @@
     padding: 3rem;
     border-radius: 20px;
     height: 100%;
+    filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+
 }
 
 .entry {
@@ -36,7 +38,6 @@
     padding: 10px;
     width: 250px;
     height: 80px;
-
     position: relative;
     color: #B8336A;
     cursor: pointer;
@@ -69,6 +70,8 @@
     color: white;
     padding: 3rem;
     border-radius: 20px;
+    filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+
 }
 
 .userRes p,
@@ -80,3 +83,24 @@
     font-size: 25px;
     color: white;
 }
+
+.speechBubbleContainerDJ {
+    position: absolute;
+    bottom: 130px; /* Adjust the bottom position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .speechBubbleContainerDJ p {
+    position: absolute;
+    font-size: 13px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-1%, -80%);
+    color: var(--primary);
+    text-align: center;
+    margin: 0;
+    color: #000;
+  }
