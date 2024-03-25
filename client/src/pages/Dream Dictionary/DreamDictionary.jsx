@@ -41,16 +41,16 @@ const DreamDictionary = () => {
       image: flying,
     },
     {
-id: 5,
-title: "Late",
-description: "Dreams of being late are a sign that you are feeling overwhelmed by a situation in your life. It could mean that you are feeling unprepared or that you are afraid of missing out on an opportunity.",
-image: late,
+      id: 5,
+      title: "Late",
+      description: "Dreams of being late are a sign that you are feeling overwhelmed by a situation in your life. It could mean that you are feeling unprepared or that you are afraid of missing out on an opportunity.",
+      image: late,
     },
     {
-id: 6,
-title: "Lost",
-description: "Dreams of being lost are a sign that you are feeling directionless in your life. It could mean that you are feeling confused or that you are searching for something that is missing in your life.",
-image: lost,
+      id: 6,
+      title: "Lost",
+      description: "Dreams of being lost are a sign that you are feeling directionless in your life. It could mean that you are feeling confused or that you are searching for something that is missing in your life.",
+      image: lost,
     },
     {
       id: 7,
@@ -59,12 +59,13 @@ image: lost,
       image: naked,
     },
     {
-id: 8,
-title: "Sleep Paralysis",
-description: "Dreams of sleep paralysis are a sign that you are feeling trapped or helpless in your life. It could mean that you are feeling overwhelmed by a situation or that you are afraid of losing control.",
-image: paralysis,
+      id: 8,
+      title: "Sleep Paralysis",
+      description: "Dreams of sleep paralysis are a sign that you are feeling trapped or helpless in your life. It could mean that you are feeling overwhelmed by a situation or that you are afraid of losing control.",
+      image: paralysis,
     },
-    { id: 9,
+    {
+      id: 9,
       title: "Teeth",
       description: "Dreams of teeth are a sign that you are feeling anxious or stressed in your life. It could mean that you are feeling insecure or that you are afraid of losing something important to you.",
       image: teeth,
@@ -104,7 +105,7 @@ image: paralysis,
             setShowDescription(true)
           }}>
             <div>
-              <img src={item.image} alt={item.title} width={300}  className={styles.image}/>
+              <img src={item.image} alt={item.title} width={300} className={styles.image} />
               <h2 className={styles.title}>{item.title}</h2>
             </div>
             {showDescription && selectedDream === item.id ?
@@ -116,15 +117,6 @@ image: paralysis,
 
         ))}
 
-        {/* {showDescription ? (
-          <div className={styles.description}>
-
-            <h2>Description</h2>
-            <p>{showDescriptionText()}</p>
-
-          </div>
-
-        ) : ''} */}
       </div>
 
 

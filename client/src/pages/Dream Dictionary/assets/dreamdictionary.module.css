@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Sarabun', sans-serif;
+    cursor: pointer;
 }
 
 .container{
@@ -40,12 +41,61 @@
 
 .description{
     font-size: 1.5rem;
-    /* color: white; */
     width: 70%;
-    /* background-image: linear-gradient(#C490D1, #ACACDE, #ABDAFC); */
     background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
     padding: 5%;
     height: 300px;
+    animation: fadeIn ease .5s;
+    animation-duration: 2.1s; 
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@media screen and (max-width: 768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+    }
+    .card {
+        background-image: linear-gradient(#C490D1, #ACACDE, #ABDAFC);
+        border-radius: 20px;
+        filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+        padding: 3rem;
+        margin: 2%;
+        display: flex;
+        height: 400px;
+    }
+    .card div {
+        margin-right: 2%;
+    }
+    
+    .title{
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+    .image{
+        border-radius: 20px;
+    }
+    
+    .description{
+        font-size: 1.5rem;
+        width: 70%;
+        background-color: white;
+        border-radius: 20px;
+        filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+        padding: 5%;
+        height: 400px;
+    }
 }
