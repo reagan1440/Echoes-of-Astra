@@ -10,7 +10,7 @@ import AuthPage from './pages/Auth';
 import Success from './pages/Success';
 import ChatbotApp from './components/OPENAI/chat.jsx';
 import DreamJournal from './pages/DreamJournal/DreamJournal.jsx';
-import Donations from './pages/Donations';
+import Donations from './pages/donation/Donations';
 
 const router = createBrowserRouter([
   {

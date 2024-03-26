@@ -1,0 +1,29 @@
+{
+  "donation": [
+  {
+    "id": 10,
+    "title": "10$ Donation",
+    "description": "Supporter"
+  },
+  {
+    "id": 25,
+    "title": "25$ Donation",
+    "description": "Bronze Donor"
+  },
+  {
+    "id": 50,
+    "title": "50$ Donation",
+    "description": "Silver Donor"
+  },
+  {
+    "id": 100,
+    "title": "100$ Donation",
+    "description": "Gold Donor"
+  },
+  {
+    "id": 0,
+    "title": "Custom Donation",
+    "description": "Input Donation"
+  }
+]
+}
