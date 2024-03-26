@@ -96,6 +96,28 @@
         border-radius: 20px;
         filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
         padding: 5%;
-        height: 400px;
+        height: 300px;
     }
+}
+
+@media screen and (max-width: 375px) {
+
+
+    .description p {
+        font-size: 15px; 
+      }
+    .description{
+        height: 400px;
+        width: 70%;
+        margin: 10px;
+    }
+
+    .card {
+        height: 480px;
+    }
+    .description h2:first-child {
+        font-size: 25px; 
+    }
+    
+
 }
