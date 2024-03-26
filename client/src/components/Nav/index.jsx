@@ -6,6 +6,7 @@ import { IoLogOut } from "react-icons/io5";
 import { IoHome } from "react-icons/io5";
 
 
+
 function Nav() {
 
   function showNavigation() {
@@ -55,6 +56,7 @@ function Nav() {
   }
 
   return (
+    <div className="nav-wrapper">
     <header className="flex-row px-2" style={{ justifyContent: 'space-between' }}>
       <h1>
         <Link to="/">
@@ -66,6 +68,7 @@ function Nav() {
         {showNavigation()}
       </nav>
     </header>
+    </div>
   );
 }
 
