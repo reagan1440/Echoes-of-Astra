@@ -68,7 +68,7 @@ const ChatbotApp = () => {
           <Image
             src={sbubble}
             boxSize="16%"
-            alt="lbubble"
+            alt="speechbubble"
             className="speechBubble"
           />
           <p>

@@ -215,31 +215,32 @@ input:focus {
   color: var(--error);
 }
 
-@media screen and (max-width: 768px) {
-  .card {
-    width: 100%;
-  }
-}
+
 
 
 
 
 /* NAV */
 
-.flex-row {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.5));
-
+.nav-wrapper {
+  backdrop-filter: blur(2.5px);
+  padding: 10px 20px; 
 }
 
-.icons{
+.icons-container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+}
+
+
+.icons {
   display: inline-block;
   padding-top: 20px;
-  margin-right: 15px; 
-  filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.6));
+  margin-right: 15px;
 }
+
 
 
 /* Dream Interpretation AI  */
@@ -273,7 +274,7 @@ input:focus {
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
-  /* margin-left: 465px; */
+ 
 }
 
 .chatbox-response {
@@ -290,8 +291,8 @@ input:focus {
 
 .speechBubbleContainer {
   position: absolute;
-  bottom: 150px; /* Adjust the bottom position as needed */
-  right: 60px; /* Adjust the right position as needed */
+  bottom: 150px; 
+  right: 60px; 
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -310,6 +311,9 @@ input:focus {
 }
 
 
+
+/* MEDIA SCREEN  */
+
 @media screen and (max-width: 768px) {
   .chatbox-input {
    width: 200px !important;
@@ -320,4 +324,22 @@ input:focus {
   .chatbox-submit{
     height: 50px;
   }
+
+  .card {
+    width: 100%;
+  }
+
+  .chatbox-container{
+    margin-top: 30%;
+    padding-right: 100px;
+    width: 100%;
+  }
+
+  .chatbox-input{
+    width: 150% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+ 
 }

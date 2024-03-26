@@ -1,4 +1,4 @@
-import Donations from "../../pages/donation/donationIndex.jsx"
+import Donations from "./DonationIndex.jsx"
 
 
 export default function Donation () {

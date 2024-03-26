@@ -6,6 +6,7 @@ import { IoLogOut } from "react-icons/io5";
 import { IoHome } from "react-icons/io5";
 
 
+
 function Nav() {
 
   function showNavigation() {
@@ -14,18 +15,18 @@ function Nav() {
         <ul className="flex-row">
           <li className="mx-1">
           <Link  className="icons" to="/donations"  title="Make a donation">
-           <BiSolidDonateHeart />
+           <BiSolidDonateHeart style={{ fontSize: "30px" }} />
            </Link>
           </li>
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a className="icons" title="Logout" href="/" onClick={() => Auth.logout()}>
-            <IoLogOut />
+            <IoLogOut style={{ fontSize: "30px" }} />
             </a>
           </li>
           <li className="mx-1">
             <Link className="icons" to="/"  title="Go to homepage">
-            <IoHome />
+            <IoHome style={{ fontSize: "30px" }} />
             </Link>
           </li>
         </ul>
@@ -35,18 +36,18 @@ function Nav() {
         <ul className="flex-row">
           <li className="icons">
             <Link to="/auth" title="Login">
-              <CgProfile />
+              <CgProfile style={{ fontSize: "30px" }} />
             </Link>
           </li>
           <li className="icons">
             <Link to="/donations"  title="Make a donation">
            
-              <BiSolidDonateHeart />
+              <BiSolidDonateHeart style={{ fontSize: "30px" }} />
             </Link>
           </li>
           <li className="icons">
             <Link to="/"  title="Go to homepage">
-            <IoHome />
+            <IoHome style={{ fontSize: "30px" }}/>
             </Link>
           </li>
         </ul>
@@ -55,6 +56,7 @@ function Nav() {
   }
 
   return (
+    <div className="nav-wrapper">
     <header className="flex-row px-2" style={{ justifyContent: 'space-between' }}>
       <h1>
         <Link to="/">
@@ -66,6 +68,7 @@ function Nav() {
         {showNavigation()}
       </nav>
     </header>
+    </div>
   );
 }
 

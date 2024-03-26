@@ -1,6 +1,6 @@
 import React from 'react';
-import data from "../../pages/donation/assets/data/index.json";
-import "./donation.css"
+import data from "./assets/data/index.json";
+import "./Donation.css"
 
 export default function Donation() {
   return (
