@@ -131,10 +131,10 @@ function AuthPage() {
           />
         </div>
         <div className="flex-row flex-end">
-          <Button type="submit">{isLogin ? 'Login' : 'Sign Up'}</Button>
+          <Button  className="submitButton"type="submit">{isLogin ? 'Login' : 'Sign Up'}</Button>
         </div>
       </form>
-      <Button onClick={toggleMode}>
+      <Button className="signupButton" onClick={toggleMode}>
         {isLogin ? 'Need to Sign Up?' : 'Already have an account? Login'}
       </Button>
     </div>

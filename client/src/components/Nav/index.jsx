@@ -15,18 +15,18 @@ function Nav() {
         <ul className="flex-row">
           <li className="mx-1">
           <Link  className="icons" to="/donations"  title="Make a donation">
-           <BiSolidDonateHeart style={{ fontSize: "30px" }} />
+           <BiSolidDonateHeart/>
            </Link>
           </li>
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a className="icons" title="Logout" href="/" onClick={() => Auth.logout()}>
-            <IoLogOut style={{ fontSize: "30px" }} />
+            <IoLogOut/>
             </a>
           </li>
           <li className="mx-1">
             <Link className="icons" to="/"  title="Go to homepage">
-            <IoHome style={{ fontSize: "30px" }} />
+            <IoHome/>
             </Link>
           </li>
         </ul>
@@ -36,18 +36,18 @@ function Nav() {
         <ul className="flex-row">
           <li className="icons">
             <Link to="/auth" title="Login">
-              <CgProfile style={{ fontSize: "30px" }} />
+              <CgProfile />
             </Link>
           </li>
           <li className="icons">
             <Link to="/donations"  title="Make a donation">
            
-              <BiSolidDonateHeart style={{ fontSize: "30px" }} />
+              <BiSolidDonateHeart />
             </Link>
           </li>
           <li className="icons">
             <Link to="/"  title="Go to homepage">
-            <IoHome style={{ fontSize: "30px" }}/>
+            <IoHome/>
             </Link>
           </li>
         </ul>
