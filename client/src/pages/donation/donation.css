@@ -66,36 +66,3 @@
     display: flex;
     align-items: flex-start;
   }
-
-
-  @media screen and (max-width: 375px){
-
-    .donation--title{
-      margin-top: -100px;
-      font-size: 25px;
-      backdrop-filter: blur(2.5px);
-    }
-    .donation--section--heading {
-      font-size: 30px;
-      line-height: 35px;
-      margin-bottom: -50px;
-      backdrop-filter: blur(3px);
-    }
-    .donation--section--container {
-      display: table-row;
-    }
-    .donation--section--card {
-      display: flex;
-      padding: 20px;
-    }
-
-    .donation--section--card--content {
-      gap: 12px;
-    }
-    .donation--section--title {
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 40px;
-    }
-
-  }

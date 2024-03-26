@@ -11,6 +11,7 @@ import Success from './pages/Success';
 import ChatbotApp from './components/OPENAI/chat.jsx';
 import DreamJournal from './pages/DreamJournal/DreamJournal.jsx';
 import Donations from './pages/donation/Donations';
+import auth from './utils/auth.js'
 
 const router = createBrowserRouter([
   {
@@ -32,15 +33,15 @@ const router = createBrowserRouter([
       },  
       {
         path: '/dreamDictionary',
-        element: <DreamDictionary />
+        element: auth.loggedIn() ? <DreamDictionary /> : <AuthPage />
       },
       {
         path: '/dreamInterpretation',
-        element: <ChatbotApp />
+        element: auth.loggedIn() ? <ChatbotApp /> : <AuthPage />
       },
       {
         path: '/dreamJournal',
-        element: <DreamJournal />
+        element: auth.loggedIn() ? <DreamJournal /> : <AuthPage />
       },
       {
         path: '/donations',

@@ -11,11 +11,12 @@ const ChatbotApp = () => {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
   const [saveDream] = useMutation(SAVE_DREAM);
-  const loading = false;
+  const  [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    
+    setLoading(true)
     try {
       const requestOptions = {
         method: "POST",
@@ -44,7 +45,7 @@ const ChatbotApp = () => {
       }
 
       const aiResponse = await response.json();
-
+      // loading = false;
       const dataObj = {
         usersDream: prompt,
         aiResponse: aiResponse.choices[0].message.content,
@@ -55,6 +56,7 @@ const ChatbotApp = () => {
       });
 
       console.log(aiResponse);
+      setLoading(false);
       setResponse(aiResponse);
     } catch (error) {
       console.error("Error:", error);
@@ -77,7 +79,13 @@ const ChatbotApp = () => {
             Click me to view your <br />
             dream journal!!
           </p>
-          <Image src={astra} boxSize="20%" alt="genie" className="float"   height={{base: "100%", sm: "50%"}} />
+          <Image
+            src={astra}
+            boxSize="20%"
+            alt="genie"
+            className="float"
+            height={{ base: "100%", sm: "50%" }}
+          />
         </div>
       </Link>
       <div className="chatbox-container">
@@ -94,7 +102,7 @@ const ChatbotApp = () => {
             type="submit"
             className="chatbox-submit"
           >
-            <TbMessageCircleUp />
+            {loading ? 'loading' :<TbMessageCircleUp />}
           </button>
         </form>
       </div>
