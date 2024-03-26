@@ -246,13 +246,22 @@ input:focus {
 
 /* Dream Interpretation AI  */
 
+/* .chatbox-card {
+  background-image: linear-gradient(#C490D1, #ACACDE, #ABDAFC);
+  border-radius: 20px;
+  filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+  padding: 3rem;
+  margin: 2%;
+  display: flex;
+  height: 400px;
+  } */
+
 .chatbox-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
   filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
-
 }
 
 .form-container {
