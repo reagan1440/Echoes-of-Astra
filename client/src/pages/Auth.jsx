@@ -5,9 +5,33 @@ import { Button } from '@chakra-ui/react';
 import Auth from '../utils/auth';
 import { LOGIN, ADD_USER } from '../utils/mutations';
 
+// const Profile = () => {
+//   const { username: userParam } = useParams();
+//   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+//     variables: { username: userParam },
+//   });
+//   const user = data?.me || data?.user || {};
+//   if (
+//     Auth.loggedIn() &&
+//     /* TODO: Check if the user's username is strictly equal to the userParam variable's value */
+//   ) {
+//     return <Navigate to="/me" />;
+//   }
+//   if (loading) {
+//     return <div>Loading...</div>;
+//   }
+//   if (!user?.username) {
+//     return (
+//       <h4>
+//         You need to be logged in to see this. Use the navigation links above to
+//         sign up or log in!
+//       </h4>
+//     );
+//   }
+
 function AuthPage() {
   const [formState, setFormState] = useState({ email: '', password: '', firstName: '', lastName: '' });
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [login] = useMutation(LOGIN);
   const [addUser] = useMutation(ADD_USER);
 
