@@ -117,3 +117,113 @@
     color: #000;
   }
 
+
+  @media screen and (max-width: 768px){
+
+
+    .entryHistory {
+        align-items: center;
+        flex: 1;
+        max-width: 300px;
+    }
+    
+    .containerTitle {
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    
+    .speechBubbleContainerDJ {
+        position: fixed;
+        bottom: 100px; 
+        right: 200px; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      
+      .speechBubbleContainerDJ p {
+        position: absolute;
+        font-size: 20px;
+        top: 1%;
+        left: 10%;
+        text-align: center;
+        margin: 0;
+        color: #000;
+      }
+    }
+    
+    @media screen and (max-width: 375px){
+     
+    
+    .entryHistory {
+        max-width: 200px;
+        height: 100%;
+    }
+    
+    .containerTitle {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .entry {
+        min-width: 50px;
+        min-height: 50px;
+    }
+    
+    .entry:after {
+        content:"";
+        background-color:#fff;
+        border-radius:50%;
+        display:block;
+        position:absolute;
+        z-index:1;
+        bottom:-20px;
+        right:-22px;
+        width:25px;
+        height:25px;
+    }
+    
+    
+    .entry p {
+        font-size: 12px;
+    }
+    
+    .currentEntry {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;}
+    
+    .currentEntry p {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+    
+    
+    .noEntries {
+        font-size: 15px;
+    }
+    
+    .speechBubbleContainerDJ {
+        position: absolute;
+        bottom: 130px; /* Adjust the bottom position as needed */
+        right: 20px; /* Adjust the right position as needed */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      
+      .speechBubbleContainerDJ p {
+        position: absolute;
+        font-size: 13px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-1%, -80%);
+        color: var(--primary);
+        text-align: center;
+        margin: 0;
+        color: #000;
+      }
+    }
