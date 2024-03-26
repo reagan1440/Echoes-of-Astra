@@ -36,16 +36,6 @@
   .donation--section--card:hover .skills--section--description {
     color: var(--darkblue);
   }
-  .donation--section--img {
-    display: flex;
-    padding: 13.3px;
-    justify-content: center;
-    align-items: center;
-    gap: 13.3px;
-    border-radius: 10.6px;
-    background: #fff;
-    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
-  }
   .donation--section--card--content {
     display: flex;
     flex-direction: column;
