@@ -12,8 +12,8 @@ const stripePromise = loadStripe(
           .redirectToCheckout({
             lineItems: [{ price: itemID, quantity: 1 }],
             mode: "payment",
-            successUrl: window.location.protocol + "//localhost:3000/success",
-            cancelUrl: window.location.protocol + "//localhost:3000",
+            successUrl: window.location.protocol + "//https://echoes-of-astra.onrender.com/success",
+            cancelUrl: window.location.protocol + "//https://echoes-of-astra.onrender.com/",
             submitType: "donate",
           })
           .then(function (result) {
