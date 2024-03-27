@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { SAVE_DREAM } from "../../utils/mutations";
-import astra from "../../assets/images/Cosmog.png";
+import astra from "../../assets/images/cosmog.png";
 import sbubble from "../../assets/images/speechBubble.png";
 import { Link } from "react-router-dom";
 import { TbMessageCircleUp } from "react-icons/tb";
