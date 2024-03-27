@@ -11,6 +11,7 @@ function AuthPage() {
   const [isLogin, setIsLogin] = useState(false);
   const [login] = useMutation(LOGIN);
   const [addUser] = useMutation(ADD_USER);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -23,6 +24,7 @@ function AuthPage() {
         Auth.login(token);
       } catch (e) {
         console.log(e);
+        setErrorMessage('Incorrect username or password');
       }
     } else {
       try {
@@ -114,6 +116,7 @@ function AuthPage() {
       <Button className="signupButton" onClick={toggleMode}>
         {isLogin ? 'Need to Sign Up?' : 'Already have an account? Login'}
       </Button>
+      {errorMessage && <p style={{color:'#FF3131'}}>{errorMessage}</p>}
     </div>
   );
 }
