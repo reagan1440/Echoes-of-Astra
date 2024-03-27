@@ -1,4 +1,4 @@
-import astra from "../../assets/images/Cosmog.png";
+import astra from "../../assets/images/cosmog.png";
 import lbubble from "../../assets/images/Lbubble.png";
 import mbubble from "../../assets/images/Mbubble.png";
 import rbubble from "../../assets/images/Rbubble.png";
