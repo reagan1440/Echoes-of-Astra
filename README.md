@@ -85,8 +85,8 @@ my dreams and efficient exploration of their interpretations.
 
 
 ## Contributers
-* Reagan Lowe
-* Catlin Miller
-* Max Martinez
-* Sarahy Moros
-* Brianna Saglimbeni
+* [Reagan Lowe](https://github.com/reagan1440)
+* [Catlin Miller](https://github.com/CatlinMillz)
+* [Max Martinez](https://github.com/maxmruiz)
+* [Sarahy Moros](https://github.com/Sarmoros)
+* [Brianna Saglimbeni](https://github.com/bsaglimb)
