@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import { Image } from '@chakra-ui/react'; // Import Image component
 import styles from './assets/journal.module.css';
 import { QUERY_USER } from '../../utils/queries';
-import astra from '../../assets/images/Cosmog.png';
+import astra from '../../assets/images/cosmog.png';
 import sbubble from '../../assets/images/speechBubble.png';
 
 
