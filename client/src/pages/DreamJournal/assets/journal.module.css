@@ -98,8 +98,8 @@
 
 .speechBubbleContainerDJ {
     position: absolute;
-    bottom: 130px; /* Adjust the bottom position as needed */
-    right: 20px; /* Adjust the right position as needed */
+    bottom: 130px;
+    right: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -227,3 +227,66 @@
         color: #000;
       }
     }
+
+/* Existing code... */
+
+@media screen and (max-width: 600px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .entryHistory {
+        max-width: 600px;
+        height: 100%;
+    }
+
+    .containerTitle {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .entry {
+        min-width: 50px;
+        min-height: 50px;
+    }
+
+    .entry:after {
+        content: "";
+        background-color: #fff;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        bottom: -20px;
+        right: -22px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .entry p {
+        font-size: 12px;
+    }
+
+    .currentEntry {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .currentEntry p,
+    .entry p {
+        margin-top: 15px;
+        font-size: 25px;
+
+    }
+
+    .noEntries {
+        font-size: 15px;
+    }
+
+    .speechBubbleContainerDJ {
+        display: none;
+    }
+}
