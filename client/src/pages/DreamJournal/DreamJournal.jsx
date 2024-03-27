@@ -6,7 +6,7 @@ import styles from './assets/journal.module.css';
 import { QUERY_USER } from '../../utils/queries';
 import astra from '../../assets/images/Cosmog.png';
 import sbubble from '../../assets/images/speechBubble.png';
-import auth from '../../utils/auth'
+
 
 export default function DreamJournal() {
   const { data, loading } = useQuery(QUERY_USER);
@@ -17,9 +17,6 @@ export default function DreamJournal() {
   const handleEntryClick = (entry) => {
     setSelectedEntry(entry);
   };
-//   if (!auth.loggedIn()){
-// window.location.replace('/auth')
-//   }
 
   return (
     <>
