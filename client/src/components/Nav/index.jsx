@@ -14,18 +14,18 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-          <Link  className="icons" to="/donations"  title="Make a donation">
+          <Link  className="iconsAfter" to="/donations"  title="Make a donation">
            <BiSolidDonateHeart/>
            </Link>
           </li>
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a className="icons" title="Logout" href="/" onClick={() => Auth.logout()}>
+            <a className="iconsAfter" title="Logout" href="/" onClick={() => Auth.logout()}>
             <IoLogOut/>
             </a>
           </li>
           <li className="mx-1">
-            <Link className="icons" to="/"  title="Go to homepage">
+            <Link className="iconsAfter" to="/"  title="Go to homepage">
             <IoHome/>
             </Link>
           </li>

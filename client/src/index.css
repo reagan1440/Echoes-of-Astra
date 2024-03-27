@@ -145,11 +145,7 @@ input:focus {
   margin-right: auto;
 }
 
-.signup{
-  width: 25%;
-  color: var(--primary);
-  font-size: 20px;
-}
+
 
 .flex-row {
   display: flex;
@@ -219,7 +215,14 @@ input:focus {
 
 
 
+/* SIGNUP */
 
+.signup{
+  width: 25%;
+  color: var(--primary);
+  font-size: 20px;
+  backdrop-filter: blur(2.5px);
+}
 
 /* NAV */
 
@@ -237,6 +240,12 @@ input:focus {
 
 
 .icons {
+  display: inline-block;
+  padding-top: 20px;
+  margin-right: 15px;
+  font-size: 30px;
+}
+.iconsAfter {
   display: inline-block;
   padding-top: 20px;
   margin-right: 15px;
@@ -327,6 +336,13 @@ input:focus {
 /* MEDIA SCREEN  */
 
 @media screen and (max-width: 768px) {
+  
+  .signup{
+    width: 40%;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
   .chatbox-input {
    width: 200px !important;
    height: 300px
@@ -350,6 +366,20 @@ input:focus {
   .chatbox-input{
     width: 150% !important;
   }
+  .icons {
+    display: inline-block;
+    padding-top: 15px;
+    padding-left: 2px;
+    font-size: 30px;
+  }
+
+  .iconsAfter {
+    display: inline-block;
+    padding-top: 15px;
+    margin-right: 1px;
+    font-size: 30px;
+  }
+
 }
 
 @media screen and (max-width: 375px) {
@@ -384,10 +414,17 @@ input:focus {
   .icons {
     display: inline-block;
     padding-top: 27px;
+    padding-left: 2px;
+    font-size: 20px;
+  }
+
+  .iconsAfter {
+    display: inline-block;
+    padding-top: 27px;
     margin-right: 1px;
     font-size: 20px;
-    
   }
+  
 
   .nav-wrapper header h1 a:first-child {
     font-size: 25px;
