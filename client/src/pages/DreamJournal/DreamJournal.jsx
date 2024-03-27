@@ -22,16 +22,16 @@ export default function DreamJournal() {
     <>
       <Link to="/dreamInterpretation">
         <div className={styles.speechBubbleContainerDJ}>
-          <Image src={sbubble} boxSize="16%" alt="sbubble"/>
+          <Image src={sbubble} boxSize="12%" alt="sbubble"/>
           <p className={styles.speechBubbleContainerDJ}>
             Hi, I&apos;m Astra, <br />
             your dream interpretation AI! <br />
             Click me to have your <br />
             dream interpreted!!
           </p>
-          <Image src={astra} boxSize="20%" alt="genie" className="float" />
+          <Image src={astra} boxSize="13%" alt="genie" className="float" />
         </div>
-      </Link>
+        </Link>
 
       <div className={styles.main}>
         <div className={styles.entryHistory}>
