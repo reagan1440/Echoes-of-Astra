@@ -94,4 +94,4 @@ my dreams and efficient exploration of their interpretations.
 ### Demo
 [https://drive.google.com/file/d/1IwnHZLdhXe_UxkF7kpqzcasD90tbWhJp/view](https://drive.google.com/file/d/1IwnHZLdhXe_UxkF7kpqzcasD90tbWhJp/view)
 
-![demo]()
+![](./client/src/assets/Echoes-Of-Astra.mp4)
