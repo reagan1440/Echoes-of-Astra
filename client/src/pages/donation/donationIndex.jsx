@@ -1,4 +1,4 @@
-import Donations from "../../pages/donation/donationIndex.jsx"
+import Donations from "./DonationIndex.jsx"
 import { loadStripe } from "@stripe/stripe-js";
 const stripePromise = loadStripe(
       "pk_test_51OycFNP9i2J0iqsYk9dMVf7qzBg20YoC02srNFbkUjj4Bsjh0jeWjnfFUN0XRGQi2Mi2NQ0tJUHgEubc8l4WUFx3003URSRjQW"

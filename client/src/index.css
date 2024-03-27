@@ -260,8 +260,6 @@ input:focus {
 .chatbox-container {
   display: flex;
   justify-content: center;
-
-  
   margin-top: 40px;
   filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
 }
@@ -311,8 +309,8 @@ input:focus {
 }
 
 .speechBubbleContainer {
-  position: absolute;
-  bottom: 150px; 
+  position: fixed;
+  top: 200px; 
   right: 60px; 
   display: flex;
   flex-direction: column;
@@ -320,11 +318,10 @@ input:focus {
 }
 
 .speechBubbleContainer p {
-  position: absolute;
+  position: fixed;
   font-size: 13px;
-  top: 40%;
-  left: 50%;
-  transform: translate(275%, -160%);
+  top: 260px;
+  right: 80px;
   color: var(--primary);
   text-align: center;
   margin: 0;
@@ -379,6 +376,28 @@ input:focus {
     margin-right: 1px;
     font-size: 30px;
   }
+
+.speechBubbleContainer {
+  position: fixed;
+  top: 620px; 
+  right: 20px; 
+  width: 150%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.speechBubbleContainer p {
+  position: fixed;
+  font-size: 11px;
+  top: 670px;
+  right: 40px;
+  color: var(--primary);
+  text-align: center;
+  margin: 0;
+  color: #000;
+}
+
 
 }
 
@@ -457,6 +476,23 @@ input:focus {
   display: flex;
   height: auto;
   width: 80%;
+}
+
+.speechBubbleContainer {
+  position: fixed;
+  top: 420px; 
+  right: 100px; 
+  width: 150%;
+}
+
+.speechBubbleContainer p {
+  font-size: 7px;
+  top: 455px;
+  right: 110px;
+  color: var(--primary);
+  text-align: center;
+  margin: 0;
+  color: #000;
 }
 
 }
