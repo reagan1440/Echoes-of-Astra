@@ -154,6 +154,7 @@ input:focus {
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 
@@ -246,20 +247,12 @@ input:focus {
 
 /* Dream Interpretation AI  */
 
-/* .chatbox-card {
-  background-image: linear-gradient(#C490D1, #ACACDE, #ABDAFC);
-  border-radius: 20px;
-  filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
-  padding: 3rem;
-  margin: 2%;
-  display: flex;
-  height: 400px;
-  } */
 
 .chatbox-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+
+  
   margin-top: 40px;
   filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
 }
@@ -281,8 +274,10 @@ input:focus {
   background-color: #abdafc;
   color: black;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-left: 15px;
   padding: 10px;
+  font-size: 20px;
   cursor: pointer;
  
 }
@@ -291,10 +286,17 @@ input:focus {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  background-image: linear-gradient(#C490D1, #ACACDE, #ABDAFC);
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 20px auto 2%;
+  display: flex;
+  height: 400px;
+  width: 50%;
 }
 
 .chatbox-response p {
-  background-color: #f0f0f0;
+  background-color: #f0f0f081;
   padding: 10px;
   border-radius: 5px;
 }
@@ -382,12 +384,13 @@ input:focus {
   .icons {
     display: inline-block;
     padding-top: 27px;
-    margin-right: 10px;
+    margin-right: 1px;
     font-size: 20px;
+    
   }
 
   .nav-wrapper header h1 a:first-child {
-    font-size: 30px;
+    font-size: 25px;
   }
 
 .signup{
@@ -405,6 +408,18 @@ input:focus {
 .flex-row {
   display: flex;
   justify-content: flex-start; /* Align items along the main axis (horizontal centering) */
+}
+
+.chatbox-response {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 20px auto 2%;
+  display: flex;
+  height: auto;
+  width: 80%;
 }
 
 }
