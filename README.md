@@ -81,8 +81,8 @@ my dreams and efficient exploration of their interpretations.
 
 
 ## Links
-* https://github.com/reagan1440/Echoes-of-Astra
-* https://echoes-of-astra.onrender.com/
+* [Our Github Repository](https://github.com/reagan1440/Echoes-of-Astra)
+* [Our Live Site](https://echoes-of-astra.onrender.com/)
 
 
 ## Contributers
@@ -93,6 +93,4 @@ my dreams and efficient exploration of their interpretations.
 * [Brianna Saglimbeni](https://github.com/bsaglimb)
 
 ### Demo
-[https://drive.google.com/file/d/1IwnHZLdhXe_UxkF7kpqzcasD90tbWhJp/view](https://drive.google.com/file/d/1IwnHZLdhXe_UxkF7kpqzcasD90tbWhJp/view)
-
-![demo]()
+https://drive.google.com/file/d/1IwnHZLdhXe_UxkF7kpqzcasD90tbWhJp/view
