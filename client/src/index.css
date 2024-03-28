@@ -332,7 +332,7 @@ input:focus {
 
 /* MEDIA SCREEN  */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   
   .signup{
     width: 40%;
@@ -401,7 +401,7 @@ input:focus {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .chatbox-input {
    height: 250px
   
