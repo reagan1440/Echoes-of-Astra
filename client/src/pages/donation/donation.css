@@ -65,6 +65,23 @@
     display: flex;
     align-items: flex-start;
   }
+
+  @media screen and (max-width: 768px){
+
+
+
+    .donation--section--container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }
+    .donation--section--card {
+      font-size: 20px;
+      min-height: 125px;
+    }
+
+  }
+
   @media screen and (max-width: 450px){
 
 
