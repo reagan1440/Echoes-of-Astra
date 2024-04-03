@@ -298,7 +298,7 @@ input:focus {
   padding: 3rem;
   margin: 20px auto 2%;
   display: flex;
-  height: 400px;
+  height: auto;
   width: 50%;
 }
 
@@ -497,3 +497,28 @@ input:focus {
 
 }
 
+@media only screen and (max-width: 300px) {
+  .speechBubbleContainer{
+    display: none;
+  }
+
+  .nav-wrapper header h1 a:first-child {
+    font-size: 18px;
+  }
+
+  .icons {
+    display: flex;
+    margin-right: 1px;
+    font-size: 18px;
+  }
+
+  .iconsAfter {
+    display: flex;
+    margin-right: 1px;
+    font-size: 18px;
+  }
+
+  .chatbox-input{
+    width: 200% !important;
+  }
+}

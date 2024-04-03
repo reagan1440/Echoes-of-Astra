@@ -5,7 +5,7 @@
 Welcome to Echoes of Astra, your virtual dream interpreter powered by cutting-edge
 AI technology! Dive into the mysterious realms of your subconscious with our 
 user-friendly platform. Whether you're soaring through the skies or exploring
-enchanted forests in your dreams, Dreamify is here to decode the hidden messages
+enchanted forests in your dreams, Echoes of Astra is here to decode the hidden messages
 behind your nightly adventures.
 
 Say goodbye to puzzling over cryptic symbols and themes—our AI analyzes your dreams
