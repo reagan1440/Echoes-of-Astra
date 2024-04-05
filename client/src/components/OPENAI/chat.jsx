@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { SAVE_DREAM } from "../../utils/mutations";
+import auth from '../../utils/auth';
 import astra from "../../assets/images/cosmog.png";
 import sbubble from "../../assets/images/speechBubble.png";
 import { Link } from "react-router-dom";
@@ -11,12 +12,12 @@ const ChatbotApp = () => {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
   const [saveDream] = useMutation(SAVE_DREAM);
-  const  [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     
-    setLoading(true)
+    setLoading(true);
     try {
       const requestOptions = {
         method: "POST",
@@ -45,21 +46,30 @@ const ChatbotApp = () => {
       }
 
       const aiResponse = await response.json();
-      // loading = false;
-      const dataObj = {
-        usersDream: prompt,
-        aiResponse: aiResponse.choices[0].message.content,
-      };
+   // Perform interpretation regardless of authentication status
+   console.log("Interpreted dream:", aiResponse.choices[0].message.content);
+   setResponse(aiResponse);
+   setLoading(false);
 
-      const { data } = await saveDream({
-        variables: dataObj,
-      });
-
-      console.log(aiResponse);
-      setLoading(false);
-      setResponse(aiResponse);
+      // If user is logged in, save dream to journal
+      if (auth.loggedIn) {
+        try {
+          const dataObj = {
+            usersDream: prompt,
+            aiResponse: aiResponse.choices[0].message.content,
+          };
+      
+          const { data } = await saveDream({
+            variables: dataObj,
+          });
+      
+          console.log("Dream saved:", data);
+        } catch (error) {
+          console.error("Error saving dream:", error);
+        }
+      }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error interpreting dream:", error);
     }
   };
 
@@ -67,27 +77,54 @@ const ChatbotApp = () => {
     <>
       <Link to="/dreamJournal">
         <div className="speechBubbleContainer">
-          <Image
-            src={sbubble}
-            boxSize="16%"
-            alt="speechbubble"
-            className="speechBubble"
-          />
-          <p>
-            Hi, I'm Astra, <br />
-            your dream interpretation AI! <br />
-            Click me to view your <br />
-            dream journal!!
-          </p>
-          <Image
-            src={astra}
-            boxSize="20%"
-            alt="genie"
-            className="float"
-            height={{ base: "100%", sm: "50%" }}
-          />
+          {!auth.loggedIn ? (
+            <>
+              <Image
+                src={sbubble}
+                boxSize="16%"
+                alt="speechbubble"
+                className="speechBubble"
+              />
+              <p>
+                Hi, I'm Astra, <br />
+                your dream interpretation AI! <br />
+                Click me to view your <br />
+                dream journal!!
+              </p>
+              <Image
+                src={astra}
+                boxSize="20%"
+                alt="genie"
+                className="float"
+                height={{ base: "100%", sm: "50%" }}
+              />
+            </>
+          ) : (
+            <>
+              <Image
+                src={sbubble}
+                boxSize="16%"
+                alt="speechbubble"
+                className="speechBubble"
+              />
+             <p>
+                Hi, I'm Astra, <br />
+                your dream interpretation AI! <br />
+                Click me to save your dreams <br />
+                 to the dream journal!!
+              </p>
+              <Image
+                src={astra}
+                boxSize="20%"
+                alt="genie"
+                className="float"
+                height={{ base: "50%", sm: "20%" }}
+              />
+            </>
+          )}
         </div>
       </Link>
+  
       <div className="chatbox-container">
         <form onSubmit={handleSubmit}>
           <textarea
@@ -102,7 +139,7 @@ const ChatbotApp = () => {
             type="submit"
             className="chatbox-submit"
           >
-            {loading ? 'loading' :<TbMessageCircleUp />}
+            {loading ? 'loading' : <TbMessageCircleUp />}
           </button>
         </form>
       </div>
