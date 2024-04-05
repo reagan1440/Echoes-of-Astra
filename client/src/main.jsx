@@ -8,7 +8,7 @@ import DreamDictionary from './pages/Dream Dictionary/DreamDictionary.jsx';
 import NoMatch from './pages/NoMatch';
 import AuthPage from './pages/Auth';
 import Success from './pages/Success';
-import ChatbotApp from './components/OPENAI/chat.jsx';
+import ChatbotApp from './components/OPENAI/Chat.jsx';
 import DreamJournal from './pages/DreamJournal/DreamJournal.jsx';
 import Donations from './pages/donation/Donations';
 import auth from './utils/auth.js'
@@ -33,11 +33,13 @@ const router = createBrowserRouter([
       },  
       {
         path: '/dreamDictionary',
-        element: auth.loggedIn() ? <DreamDictionary /> : <AuthPage />
+        element: <DreamDictionary />
+        // element: auth.loggedIn() ? <DreamDictionary /> : <AuthPage />
       },
       {
         path: '/dreamInterpretation',
-        element: auth.loggedIn() ? <ChatbotApp /> : <AuthPage />
+        element: <ChatbotApp />
+        // element: auth.loggedIn() ? <ChatbotApp /> : <AuthPage />
       },
       {
         path: '/dreamJournal',

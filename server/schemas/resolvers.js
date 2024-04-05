@@ -7,9 +7,6 @@ const resolvers = {
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id);
-
-        // user.donations.sort((a, b) => b.purchaseDate - a.purchaseDate);
-
         return user;
       }
 
@@ -24,17 +21,7 @@ const resolvers = {
 
       return { token, user };
     },
-    // addDonation: async (parent, { products }, context) => {
-    //   if (context.user) {
-    //     const order = new Donation({ products });
 
-    //     await User.findByIdAndUpdate(context.user._id, { $push: { donations: donation } });
-
-    //     return donation;
-    //   }
-
-    //   throw AuthenticationError;
-    // },
     updateUser: async (parent, args, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(context.user._id, args, {
