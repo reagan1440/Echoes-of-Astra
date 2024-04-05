@@ -8,7 +8,7 @@ import DreamDictionary from './pages/Dream Dictionary/DreamDictionary.jsx';
 import NoMatch from './pages/NoMatch';
 import AuthPage from './pages/Auth';
 import Success from './pages/Success';
-import ChatbotApp from './components/OPENAI/Chats.jsx';
+import ChatbotApp from './components/OPENAI/Chat.jsx';
 import DreamJournal from './pages/DreamJournal/DreamJournal.jsx';
 import Donations from './pages/donation/Donations';
 import auth from './utils/auth.js'
