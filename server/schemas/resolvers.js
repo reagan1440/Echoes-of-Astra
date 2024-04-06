@@ -44,24 +44,24 @@ const resolvers = {
     },
 
 
- deleteDream: async (parent, args, context) => {
-  if (context.user) {
-    try {
-      const updatedUser = await User.findOneAndUpdate(
-        { _id: context.user._id },
-        { $pull: { dreamHistory: { _id: args.dreamId } } },
-        { new: true }
-      );
+//  deleteDream: async (parent, args, context) => {
+//   if (context.user) {
+//     try {
+//       const updatedUser = await User.findOneAndUpdate(
+//         { _id: context.user._id },
+//         { $pull: { dreamHistory: { _id: args.dreamId } } },
+//         { new: true }
+//       );
 
-      return updatedUser;
-    } catch (error) {
-      console.error('Error deleting dream:', error);
-      throw new Error('Failed to delete dream');
-    }
-  } else {
-    throw new AuthenticationError('Unauthorized');
-  }
-},
+//       return updatedUser;
+//     } catch (error) {
+//       console.error('Error deleting dream:', error);
+//       throw new Error('Failed to delete dream');
+//     }
+//   } else {
+//     throw new AuthenticationError('Unauthorized');
+//   }
+// },
 
 
 

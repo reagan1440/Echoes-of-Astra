@@ -45,20 +45,21 @@ mutation saveDream($usersDream: String, $aiResponse: String) {
       aiResponse
     }
   }
-}`
-
-
-export const DELETE_DREAM = gql`
-  mutation deleteDream($dreamId: ID!) {
-    deleteDream(dreamId: $dreamId) {
-      _id
-      firstName
-      lastName
-      email
-      dreamHistory {
-        usersDream
-        aiResponse
-      }
-    }
-  }
+}
 `;
+
+
+// export const DELETE_DREAM = gql`
+//   mutation deleteDream($dreamId: ID!) {
+//     deleteDream(dreamId: $dreamId) {
+//       _id
+//       firstName
+//       lastName
+//       email
+//       dreamHistory {
+//         usersDream
+//         aiResponse
+//       }
+//     }
+//   }
+// `;
