@@ -11,23 +11,6 @@ export const LOGIN = gql`
   }
 `;
 
-export const ADD_ORDER = gql`
-  mutation addOrder($products: [ID]!) {
-    addOrder(products: $products) {
-      purchaseDate
-      products {
-        _id
-        name
-        description
-        price
-        quantity
-        category {
-          name
-        }
-      }
-    }
-  }
-`;
 
 export const ADD_USER = gql`
   mutation addUser(
@@ -62,4 +45,21 @@ mutation saveDream($usersDream: String, $aiResponse: String) {
       aiResponse
     }
   }
-}`
+}
+`;
+
+
+// export const DELETE_DREAM = gql`
+//   mutation deleteDream($dreamId: ID!) {
+//     deleteDream(dreamId: $dreamId) {
+//       _id
+//       firstName
+//       lastName
+//       email
+//       dreamHistory {
+//         usersDream
+//         aiResponse
+//       }
+//     }
+//   }
+// `;

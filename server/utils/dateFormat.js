@@ -94,37 +94,37 @@ const addDateSuffix = (date) => {
   
     const year = dateObj.getFullYear();
   
-    let hour =
+    // let hour =
   
-      dateObj.getHours() > 12
+    //   dateObj.getHours() > 12
   
-        ? Math.floor(dateObj.getHours() - 12)
+    //     ? Math.floor(dateObj.getHours() - 12)
   
-        : dateObj.getHours();
-  
-   
-  
-    // if hour is 0 (12:00am), change it to 12
-  
-    if (hour === 0) {
-  
-      hour = 12;
-  
-    }
+    //     : dateObj.getHours();
   
    
   
-    const minutes = (dateObj.getMinutes() < 10 ? '0' : '') + dateObj.getMinutes();
+    // // if hour is 0 (12:00am), change it to 12
+  
+    // if (hour === 0) {
+  
+    //   hour = 12;
+  
+    // }
   
    
   
-    // set `am` or `pm`
-  
-    const periodOfDay = dateObj.getHours() >= 12 ? 'pm' : 'am';
+    // const minutes = (dateObj.getMinutes() < 10 ? '0' : '') + dateObj.getMinutes();
   
    
   
-    const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year} at ${hour}:${minutes} ${periodOfDay}`;
+    // // set `am` or `pm`
+  
+    // const periodOfDay = dateObj.getHours() >= 12 ? 'pm' : 'am';
+  
+   
+  
+    const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year}`;
   
    
   

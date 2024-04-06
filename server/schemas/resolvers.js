@@ -1,6 +1,5 @@
-const { User, Product, Category, Donation } = require("../models");
+const { User } = require("../models");
 const { signToken, AuthenticationError } = require("../utils/auth");
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const resolvers = {
   Query: {
@@ -43,6 +42,29 @@ const resolvers = {
       }
       throw AuthenticationError;
     },
+
+
+//  deleteDream: async (parent, args, context) => {
+//   if (context.user) {
+//     try {
+//       const updatedUser = await User.findOneAndUpdate(
+//         { _id: context.user._id },
+//         { $pull: { dreamHistory: { _id: args.dreamId } } },
+//         { new: true }
+//       );
+
+//       return updatedUser;
+//     } catch (error) {
+//       console.error('Error deleting dream:', error);
+//       throw new Error('Failed to delete dream');
+//     }
+//   } else {
+//     throw new AuthenticationError('Unauthorized');
+//   }
+// },
+
+
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
