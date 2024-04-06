@@ -271,7 +271,7 @@ input:focus {
 
 .chatbox-input {
   width: 40vw; 
-  height: 30vw;
+  height: 20vw;
   border: 1px solid #abdafc;
   border-radius: 5px;
   padding: 10px;
@@ -308,6 +308,51 @@ input:focus {
   border-radius: 5px;
 }
 
+
+@keyframes fadeInAndOut {
+  0% {
+    opacity: 0; 
+  }
+  10% {
+    opacity: 1; 
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1; 
+  }
+  80% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25; /* Adjust opacity value */
+  }
+  50% {
+    opacity: 0.5; /* Adjust opacity value */
+  }
+  75% {
+    opacity: 0.75; /* Adjust opacity value */
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.speechBubble {
+  opacity: 0; 
+  animation: fadeInAndOut 10s ease forwards 1s; 
+}
 .speechBubbleContainer {
   position: fixed;
   top: 200px; 
@@ -315,18 +360,22 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  opacity: 0; 
+  animation: fadeIn 1s ease forwards .5s;
 }
 
 .speechBubbleContainer p {
   position: absolute;
   display: flex;
   font-size: .9vw;
-  top: 4.5vw;
-  right: 1.5vw;
+  top: 4vw;
+  right: 1.9vw;
   color: var(--primary);
   text-align: center;
   margin: 0;
   color: #000;
+  opacity: 0; 
+  animation: fadeInAndOut 10s ease forwards 1.1s; 
 }
 
 
@@ -393,10 +442,11 @@ input:focus {
 
 .speechBubbleContainer {
   position: fixed;
-  top: 55vw; 
+  top: 35vw; 
   right: 20px; 
   width: 135vw;
   flex-direction: column;
+  z-index: 1;
 }
 
 .speechBubbleContainer p {

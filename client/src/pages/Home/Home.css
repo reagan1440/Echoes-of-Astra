@@ -21,7 +21,6 @@ color: var(--primary);
     transform-origin: 70% 70%; 
     display: inline-block;
     filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.6));
-
   }
   
   @keyframes float-animation {
@@ -35,6 +34,7 @@ color: var(--primary);
       transform: translateY(0px); /* Return to the original position */
     }
   }
+
   
   .bubble-container {
     position: relative;

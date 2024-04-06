@@ -73,24 +73,35 @@ const ChatbotApp = () => {
     }
   };
 
+
   return (
     <>
       <Link to="/dreamJournal">
         <div className="speechBubbleContainer">
-          {!auth.loggedIn ? (
-            <>
               <Image
                 src={sbubble}
                 boxSize="16%"
                 alt="speechbubble"
                 className="speechBubble"
               />
-              <p>
-                Hi, I'm Astra, <br />
-                your dream interpretation AI! <br />
-                Click me to view your <br />
-                dream journal!!
-              </p>
+
+             <p>
+            {auth.loggedIn() ? (
+              <>
+                Hey, it's me, Astra, <br />
+                your dream interpreter <br /> 
+                extraordinaire. Click on me <br />
+                to view your saved dreams! <br />
+              </>
+            ) : (
+              <>
+                Hi, I'm Astra!!! <br />
+                Your dream interpreter<br />
+                extraordinaire. Want to save <br />
+                your dreams? Click on me! <br />
+              </>
+            )}
+          </p>
               <Image
                 src={astra}
                 boxSize="20%"
@@ -98,30 +109,7 @@ const ChatbotApp = () => {
                 className="float"
                 height={{ base: "100%", sm: "50%" }}
               />
-            </>
-          ) : (
-            <>
-              <Image
-                src={sbubble}
-                boxSize="16%"
-                alt="speechbubble"
-                className="speechBubble"
-              />
-             <p>
-                Hi, I'm Astra, <br />
-                your dream interpretation AI! <br />
-                Click me to save your dreams <br />
-                 to the dream journal!!
-              </p>
-              <Image
-                src={astra}
-                boxSize="20%"
-                alt="genie"
-                className="float"
-                height={{ base: "50%", sm: "20%" }}
-              />
-            </>
-          )}
+  
         </div>
       </Link>
   
