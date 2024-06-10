@@ -465,7 +465,7 @@ input:focus {
   right: 20px; 
   width: 135vw;
   flex-direction: column;
-  z-index: 1;
+
 }
 
 .speechBubbleContainer p {
