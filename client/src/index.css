@@ -408,12 +408,14 @@ input:focus {
   }
   
 
-  .chatbox-submit{
+  .chatbox-submit,
+  .chatbox-speech {
     height: 50px;
-    font-size: 3vw;
+    font-size: 4vw;
     margin-top: 5vw;
     margin-left: 2vw;
   }
+  
 
   .card {
     width: 100%;
@@ -483,15 +485,26 @@ input:focus {
 
 @media only screen and (max-width: 450px) {
   .chatbox-input {
-   height: 250px
+   height: 250px;
+   width: 100%;
   
   }
 
-  .chatbox-submit{
-    height: 50px;
+  .chatbox-submit,
+  .chatbox-speech {
+    width: calc(50% - 10px); 
     font-size: 5vw;
+    margin: 5vw 0; 
+    padding: 2vw;
+    box-sizing: border-box; 
+
   }
 
+  .chatbox-submit {
+    margin-right: 5vw; 
+    margin-inline: 2vw; 
+  }
+  
   .card {
     width: 100%;
   }
