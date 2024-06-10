@@ -262,6 +262,7 @@ input:focus {
   justify-content: center;
   margin-top: 40px;
   filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+  
 }
 
 .form-container {
@@ -277,16 +278,32 @@ input:focus {
   padding: 10px;
 } 
 
-.chatbox-submit {
+
+
+.chatbox-submit,
+.chatbox-speech {
   background-color: #abdafc;
   color: black;
   border: none;
   border-radius: 10px;
-  margin-left: 42vw;
+  margin-right: 5px;
   padding: 10px;
   font-size: 2vw;
   cursor: pointer;
- 
+  float: right;
+}
+
+.loader-icon svg {
+  animation: spin 2.5s linear infinite; /* Apply animation to the SVG inside the container */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* End rotation at 360 degrees */
+  }
 }
 
 .chatbox-response {

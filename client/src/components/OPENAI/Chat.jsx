@@ -6,9 +6,9 @@ import auth from "../../utils/auth";
 import astra from "../../assets/images/cosmog.png";
 import sbubble from "../../assets/images/speechBubble.png";
 import { Link } from "react-router-dom";
-import { TbMessageCircleUp } from "react-icons/tb";
+import { FiArrowUp } from "react-icons/fi";
+import { BiLoaderCircle } from "react-icons/bi";
 import { MdKeyboardVoice, MdSettingsVoice } from "react-icons/md";
-import { FiCornerRightUp } from "react-icons/fi";
 import { Image } from "@chakra-ui/react";
 
 const ChatbotApp = () => {
@@ -157,7 +157,7 @@ useEffect(() => {
             type="submit"
             className="chatbox-submit"
           >
-            {loading ? "loading" : <TbMessageCircleUp />}
+            {loading ? <div className="loader-icon"> <BiLoaderCircle /> </div>  : <FiArrowUp />}
           </button>
           <button
             disabled={loading}
@@ -165,7 +165,7 @@ useEffect(() => {
             className="chatbox-speech"
             onClick={startStopListening}
           >
-            {isListening ? "translating" : <MdKeyboardVoice />}
+            {isListening ? <MdSettingsVoice /> : <MdKeyboardVoice />}
           </button>
         </form>
       </div>
