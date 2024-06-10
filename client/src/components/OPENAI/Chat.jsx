@@ -1,22 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import SpeechToText from "../SpeechToText";
 import { useMutation } from "@apollo/client";
 import { SAVE_DREAM } from "../../utils/mutations";
-import auth from '../../utils/auth';
+import auth from "../../utils/auth";
 import astra from "../../assets/images/cosmog.png";
 import sbubble from "../../assets/images/speechBubble.png";
 import { Link } from "react-router-dom";
 import { TbMessageCircleUp } from "react-icons/tb";
-import { Image } from "@chakra-ui/react"; // Import Image component
+import { MdKeyboardVoice, MdSettingsVoice } from "react-icons/md";
+import { FiCornerRightUp } from "react-icons/fi";
+import { Image } from "@chakra-ui/react";
 
 const ChatbotApp = () => {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
   const [saveDream] = useMutation(SAVE_DREAM);
   const [loading, setLoading] = useState(false);
+  const [prevTranscript, setPrevTranscript] = useState("");
+
+
+  const { isListening, transcript, startListening, stopListening } =
+    SpeechToText({ continuous: true, onUpdateTranscript: setPrompt });
+
+  const startStopListening = () => {
+    if (isListening) {
+      setPrompt(prev => prev.trim()); // Clear prompt when starting speech-to-text
+      stopListening();
+    } else {
+      startListening();
+    }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     setLoading(true);
     try {
       const requestOptions = {
@@ -46,10 +63,10 @@ const ChatbotApp = () => {
       }
 
       const aiResponse = await response.json();
-   // Perform interpretation regardless of authentication status
-   console.log("Interpreted dream:", aiResponse.choices[0].message.content);
-   setResponse(aiResponse);
-   setLoading(false);
+      // Perform interpretation regardless of authentication status
+      console.log("Interpreted dream:", aiResponse.choices[0].message.content);
+      setResponse(aiResponse);
+      setLoading(false);
 
       // If user is logged in, save dream to journal
       if (auth.loggedIn) {
@@ -58,11 +75,11 @@ const ChatbotApp = () => {
             usersDream: prompt,
             aiResponse: aiResponse.choices[0].message.content,
           };
-      
+
           const { data } = await saveDream({
             variables: dataObj,
           });
-      
+
           console.log("Dream saved:", data);
         } catch (error) {
           console.error("Error saving dream:", error);
@@ -73,46 +90,59 @@ const ChatbotApp = () => {
     }
   };
 
+    
+useEffect(() => {
+
+  console.log("Transcript:", transcript);
+  console.log("Is Listening:", isListening);
+  console.log("Previous Transcript:", prevTranscript);
+
+
+  if (isListening && transcript && transcript !== prevTranscript) {
+    setPrompt(prev => prev.trim() + (prev.trim() ? " " : "") + transcript.trim());
+    setPrevTranscript(transcript); // Update previous transcript
+  }
+}, [transcript, isListening, prevTranscript]);
 
   return (
     <>
       <Link to="/dreamJournal">
         <div className="speechBubbleContainer">
-              <Image
-                src={sbubble}
-                boxSize="16%"
-                alt="speechbubble"
-                className="speechBubble"
-              />
+          <Image
+            src={sbubble}
+            boxSize="16%"
+            alt="speechbubble"
+            className="speechBubble"
+          />
 
-             <p>
+          <p>
             {auth.loggedIn() ? (
               <>
                 Hey, it's me, Astra, <br />
-                your dream interpreter <br /> 
+                your dream interpreter <br />
                 extraordinaire. Click on me <br />
                 to view your saved dreams! <br />
               </>
             ) : (
               <>
                 Hi, I'm Astra!!! <br />
-                Your dream interpreter<br />
+                Your dream interpreter
+                <br />
                 extraordinaire. Want to save <br />
                 your dreams? Click on me! <br />
               </>
             )}
           </p>
-              <Image
-                src={astra}
-                boxSize="20%"
-                alt="genie"
-                className="float"
-                height={{ base: "100%", sm: "50%" }}
-              />
-  
+          <Image
+            src={astra}
+            boxSize="20%"
+            alt="genie"
+            className="float"
+            height={{ base: "100%", sm: "50%" }}
+          />
         </div>
       </Link>
-  
+
       <div className="chatbox-container">
         <form onSubmit={handleSubmit}>
           <textarea
@@ -127,7 +157,15 @@ const ChatbotApp = () => {
             type="submit"
             className="chatbox-submit"
           >
-            {loading ? 'loading' : <TbMessageCircleUp />}
+            {loading ? "loading" : <TbMessageCircleUp />}
+          </button>
+          <button
+            disabled={loading}
+            type="button"
+            className="chatbox-speech"
+            onClick={startStopListening}
+          >
+            {isListening ? "translating" : <MdKeyboardVoice />}
           </button>
         </form>
       </div>
