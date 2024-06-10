@@ -262,6 +262,7 @@ input:focus {
   justify-content: center;
   margin-top: 40px;
   filter: drop-shadow(0 0 20px rgba(188, 19, 177, 0.4));
+  
 }
 
 .form-container {
@@ -277,16 +278,32 @@ input:focus {
   padding: 10px;
 } 
 
-.chatbox-submit {
+
+
+.chatbox-submit,
+.chatbox-speech {
   background-color: #abdafc;
   color: black;
   border: none;
   border-radius: 10px;
-  margin-left: 42vw;
+  margin-right: 5px;
   padding: 10px;
   font-size: 2vw;
   cursor: pointer;
- 
+  float: right;
+}
+
+.loader-icon svg {
+  animation: spin 2.5s linear infinite; /* Apply animation to the SVG inside the container */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* End rotation at 360 degrees */
+  }
 }
 
 .chatbox-response {
@@ -391,12 +408,14 @@ input:focus {
   }
   
 
-  .chatbox-submit{
+  .chatbox-submit,
+  .chatbox-speech {
     height: 50px;
-    font-size: 3vw;
+    font-size: 4vw;
     margin-top: 5vw;
     margin-left: 2vw;
   }
+  
 
   .card {
     width: 100%;
@@ -466,15 +485,26 @@ input:focus {
 
 @media only screen and (max-width: 450px) {
   .chatbox-input {
-   height: 250px
+   height: 250px;
+   width: 100%;
   
   }
 
-  .chatbox-submit{
-    height: 50px;
+  .chatbox-submit,
+  .chatbox-speech {
+    width: calc(50% - 10px); 
     font-size: 5vw;
+    margin: 5vw 0; 
+    padding: 2vw;
+    box-sizing: border-box; 
+
   }
 
+  .chatbox-submit {
+    margin-right: 5vw; 
+    margin-inline: 2vw; 
+  }
+  
   .card {
     width: 100%;
   }
